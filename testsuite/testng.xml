@@ -1,0 +1,38 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite" parallel="tests" thread-count="1" verbose="1">
+	<test name="Test1" preserve-order="true">
+		<parameter name="testname" value="test1"></parameter>
+		<parameter name="user" value="user1"></parameter>
+		<classes>
+			<class name="tests.LoginTest">
+				<methods>
+					<include name="loginWithBlankField" />
+					<include name="loginByAdmin" />
+				</methods>
+			</class>
+			<class name="tests.Sys_UnitInforTest">
+				<methods>
+					<include name="clickSystem" />
+					<include name="editUnitInformationSuccess" />
+					<include name="backunitInformation" />
+				</methods>
+			</class>
+			<class name="tests.Sys_UserAdminTest">
+				<methods>
+					<include name="clickUserAdministration" />
+					<include name="createBlankAll" />
+					<include name="create1RequiredFieldBlank1" />
+					<include name="create1RequiredFieldBlank2" />
+					<include name="create1RequiredFieldBlank3" />
+					<include name="create1RequiredFieldBlank4" />
+					<include name="reEnterPasswordDifferentPassword" />
+					<include name="clickApprovedSuccess" />
+					<include name="checkAccountClickApproved" />
+					<include name="notClickApprovedSuccess" />
+					<include name="checkAccountNotClickApproved" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

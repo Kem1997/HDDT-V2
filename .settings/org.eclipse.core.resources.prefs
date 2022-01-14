@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//src/pages/LoginPage.java=UTF-8
+encoding//src/pages/Sys_UnitInforPage.java=UTF-8
+encoding//src/pages/Sys_UserAdminPage.java=UTF-8
+encoding//src/tests/BaseTest.java=UTF-8
+encoding//src/tests/LoginTest.java=UTF-8
+encoding//src/tests/Sys_UnitInforTest.java=UTF-8
+encoding//src/tests/Sys_UserAdminTest.java=UTF-8
+encoding//src/utilities/DriverFactory.java=UTF-8

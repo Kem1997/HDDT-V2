@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Test1</a></td><td class="num">14</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">36,642</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test1 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.LoginTest</td><td><a href="#m0">loginByAdmin</a></td><td rowspan="1">1642130607600</td><td rowspan="1">10770</td></tr><tr><th colspan="4">Test1 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.LoginTest</td><td><a href="#m1">loginWithBlankField</a></td><td rowspan="1">1642130606805</td><td rowspan="1">790</td></tr><tr class="passedodd"><td rowspan="3">tests.Sys_UnitInforTest</td><td><a href="#m2">backunitInformation</a></td><td rowspan="1">1642130623754</td><td rowspan="1">2898</td></tr><tr class="passedodd"><td><a href="#m3">clickSystem</a></td><td rowspan="1">1642130618376</td><td rowspan="1">83</td></tr><tr class="passedodd"><td><a href="#m4">editUnitInformationSuccess</a></td><td rowspan="1">1642130618461</td><td rowspan="1">5291</td></tr><tr class="passedeven"><td rowspan="10">tests.Sys_UserAdminTest</td><td><a href="#m5">checkAccountClickApproved</a></td><td rowspan="1">1642130635936</td><td rowspan="1">29</td></tr><tr class="passedeven"><td><a href="#m6">clickApprovedSuccess</a></td><td rowspan="1">1642130633721</td><td rowspan="1">2213</td></tr><tr class="passedeven"><td><a href="#m7">clickUserAdministration</a></td><td rowspan="1">1642130626653</td><td rowspan="1">304</td></tr><tr class="passedeven"><td><a href="#m8">create1RequiredFieldBlank1</a></td><td rowspan="1">1642130628086</td><td rowspan="1">1321</td></tr><tr class="passedeven"><td><a href="#m9">create1RequiredFieldBlank2</a></td><td rowspan="1">1642130629409</td><td rowspan="1">1173</td></tr><tr class="passedeven"><td><a href="#m10">create1RequiredFieldBlank3</a></td><td rowspan="1">1642130630584</td><td rowspan="1">941</td></tr><tr class="passedeven"><td><a href="#m11">create1RequiredFieldBlank4</a></td><td rowspan="1">1642130631526</td><td rowspan="1">977</td></tr><tr class="passedeven"><td><a href="#m12">createBlankAll</a></td><td rowspan="1">1642130626959</td><td rowspan="1">1123</td></tr><tr class="passedeven"><td><a href="#m13">notClickApprovedSuccess</a></td><td rowspan="1">1642130635966</td><td rowspan="1">3349</td></tr><tr class="passedeven"><td><a href="#m14">reEnterPasswordDifferentPassword</a></td><td rowspan="1">1642130632508</td><td rowspan="1">1211</td></tr></tbody>
+</table>
+<h2>Test1</h2><h3 id="m0">tests.LoginTest#loginByAdmin</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.awaitility.core.ConditionTimeoutException: Condition with tests.LoginTest was not fulfilled within 10 seconds.
+	at org.awaitility.core.ConditionAwaiter.await(ConditionAwaiter.java:165)
+	at org.awaitility.core.CallableCondition.await(CallableCondition.java:78)
+	at org.awaitility.core.CallableCondition.await(CallableCondition.java:26)
+	at org.awaitility.core.ConditionFactory.until(ConditionFactory.java:895)
+	at org.awaitility.core.ConditionFactory.until(ConditionFactory.java:864)
+	at tests.LoginTest.loginByAdmin(LoginTest.java:39)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.getCurrentUrl()&quot; because the return value of &quot;tests.LoginTest.getDriver()&quot; is null
+	at tests.LoginTest.lambda$0(LoginTest.java:39)
+	at org.awaitility.core.CallableCondition$ConditionEvaluationWrapper.eval(CallableCondition.java:99)
+	at org.awaitility.core.ConditionAwaiter$ConditionPoller.call(ConditionAwaiter.java:222)
+	at org.awaitility.core.ConditionAwaiter$ConditionPoller.call(ConditionAwaiter.java:209)
+	... 4 more
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.LoginTest#loginWithBlankField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.Sys_UnitInforTest#backunitInformation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">tests.Sys_UnitInforTest#clickSystem</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">tests.Sys_UnitInforTest#editUnitInformationSuccess</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">tests.Sys_UserAdminTest#checkAccountClickApproved</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">tests.Sys_UserAdminTest#clickApprovedSuccess</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">tests.Sys_UserAdminTest#clickUserAdministration</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">tests.Sys_UserAdminTest#create1RequiredFieldBlank1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">tests.Sys_UserAdminTest#create1RequiredFieldBlank2</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">tests.Sys_UserAdminTest#create1RequiredFieldBlank3</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">tests.Sys_UserAdminTest#create1RequiredFieldBlank4</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">tests.Sys_UserAdminTest#createBlankAll</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">tests.Sys_UserAdminTest#notClickApprovedSuccess</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">tests.Sys_UserAdminTest#reEnterPasswordDifferentPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>
