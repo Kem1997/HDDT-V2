@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test1</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>14/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>13/4/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Jan 14 10:23:23 ICT 2022</td>
+<td>Started on:</td><td>Thu Jan 20 15:06:59 ICT 2022</td>
 </tr>
-<tr><td>Total time:</td><td>36 seconds (36642 ms)</td>
+<tr><td>Total time:</td><td>79 seconds (79120 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -74,6 +74,265 @@ function toggleAllBoxes() {
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
+<tr>
+<td title='tests.Cat_CustomerUploadTest.notDeleteFileUpload()'><b>notDeleteFileUpload</b><br>Test class: tests.Cat_CustomerUploadTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//tr[1]//td[11]//a&quot;}
+  (Session info: chrome=97.0.4692.71)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-6&apos;, revision: &apos;5f43a29cfc&apos;
+System info: host: &apos;DESKTOP-IASR4KE&apos;, ip: &apos;192.168.31.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\haton\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49682}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 32dd0646df1740c5e753e14e993356d8
+*** Element info: {Using=xpath, value=//tr[1]//td[11]//a}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy18.isEnabled(Unknown Source)
+	at pages.Cat_CustomerUploadPage.isEnabled(Cat_CustomerUploadPage.java:81)
+	at tests.Cat_CustomerUploadTest.notDeleteFileUpload(Cat_CustomerUploadTest.java:66)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2011327856", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2011327856'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//tr[1]//td[11]//a&quot;}
+  (Session info: chrome=97.0.4692.71)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-6&apos;, revision: &apos;5f43a29cfc&apos;
+System info: host: &apos;DESKTOP-IASR4KE&apos;, ip: &apos;192.168.31.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\haton\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49682}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 32dd0646df1740c5e753e14e993356d8
+*** Element info: {Using=xpath, value=//tr[1]//td[11]//a}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy18.isEnabled(Unknown Source)
+	at pages.Cat_CustomerUploadPage.isEnabled(Cat_CustomerUploadPage.java:81)
+	at tests.Cat_CustomerUploadTest.notDeleteFileUpload(Cat_CustomerUploadTest.java:66)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+</pre></div></td>
+<td>10</td>
+<td>tests.Cat_CustomerUploadTest@7bab3f1a</td></tr>
+<tr>
+<td title='tests.Cat_CustomerUploadTest.deleteFileUploadSuccess()'><b>deleteFileUploadSuccess</b><br>Test class: tests.Cat_CustomerUploadTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//tr[1]//td[2]&quot;}
+  (Session info: chrome=97.0.4692.71)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-6&apos;, revision: &apos;5f43a29cfc&apos;
+System info: host: &apos;DESKTOP-IASR4KE&apos;, ip: &apos;192.168.31.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\haton\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49682}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 32dd0646df1740c5e753e14e993356d8
+*** Element info: {Using=xpath, value=//tr[1]//td[2]}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy18.getText(Unknown Source)
+	at pages.Cat_CustomerUploadPage.deleteFileUpload(Cat_CustomerUploadPage.java:68)
+	at tests.Cat_CustomerUploadTest.deleteFileUploadSuccess(Cat_CustomerUploadTest.java:57)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace475415794", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace475415794'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//tr[1]//td[2]&quot;}
+  (Session info: chrome=97.0.4692.71)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-6&apos;, revision: &apos;5f43a29cfc&apos;
+System info: host: &apos;DESKTOP-IASR4KE&apos;, ip: &apos;192.168.31.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\haton\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49682}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 32dd0646df1740c5e753e14e993356d8
+*** Element info: {Using=xpath, value=//tr[1]//td[2]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy18.getText(Unknown Source)
+	at pages.Cat_CustomerUploadPage.deleteFileUpload(Cat_CustomerUploadPage.java:68)
+	at tests.Cat_CustomerUploadTest.deleteFileUploadSuccess(Cat_CustomerUploadTest.java:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+</pre></div></td>
+<td>10</td>
+<td>tests.Cat_CustomerUploadTest@7bab3f1a</td></tr>
+<tr>
+<td title='tests.Cat_CustomerUploadTest.createCustomerUploadSuccess()'><b>createCustomerUploadSuccess</b><br>Test class: tests.Cat_CustomerUploadTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h3&quot;}
+  (Session info: chrome=97.0.4692.71)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-6&apos;, revision: &apos;5f43a29cfc&apos;
+System info: host: &apos;DESKTOP-IASR4KE&apos;, ip: &apos;192.168.31.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\haton\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49682}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 32dd0646df1740c5e753e14e993356d8
+*** Element info: {Using=xpath, value=//h3}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy18.getText(Unknown Source)
+	at tests.Cat_CustomerUploadTest.createCustomerUploadSuccess(Cat_CustomerUploadTest.java:49)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1873324320", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1873324320'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h3&quot;}
+  (Session info: chrome=97.0.4692.71)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-6&apos;, revision: &apos;5f43a29cfc&apos;
+System info: host: &apos;DESKTOP-IASR4KE&apos;, ip: &apos;192.168.31.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.71, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\haton\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49682}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 32dd0646df1740c5e753e14e993356d8
+*** Element info: {Using=xpath, value=//h3}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy18.getText(Unknown Source)
+	at tests.Cat_CustomerUploadTest.createCustomerUploadSuccess(Cat_CustomerUploadTest.java:49)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+</pre></div></td>
+<td>19</td>
+<td>tests.Cat_CustomerUploadTest@7bab3f1a</td></tr>
 <tr>
 <td title='tests.LoginTest.loginByAdmin()'><b>loginByAdmin</b><br>Test class: tests.LoginTest</td>
 <td><div><pre>org.awaitility.core.ConditionTimeoutException: Condition with tests.LoginTest was not fulfilled within 10 seconds.
@@ -94,8 +353,8 @@ Caused by: java.lang.NullPointerException: Cannot invoke &quot;org.openqa.seleni
 	at org.awaitility.core.ConditionAwaiter$ConditionPoller.call(ConditionAwaiter.java:222)
 	at org.awaitility.core.ConditionAwaiter$ConditionPoller.call(ConditionAwaiter.java:209)
 	... 4 more
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1849327941", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1849327941'><pre>org.awaitility.core.ConditionTimeoutException: Condition with tests.LoginTest was not fulfilled within 10 seconds.
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1303145600", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1303145600'><pre>org.awaitility.core.ConditionTimeoutException: Condition with tests.LoginTest was not fulfilled within 10 seconds.
 	at org.awaitility.core.ConditionAwaiter.await(ConditionAwaiter.java:165)
 	at org.awaitility.core.CallableCondition.await(CallableCondition.java:78)
 	at org.awaitility.core.CallableCondition.await(CallableCondition.java:26)
@@ -133,7 +392,7 @@ Caused by: java.lang.NullPointerException: Cannot invoke &quot;org.openqa.seleni
 	... 4 more
 </pre></div></td>
 <td>10</td>
-<td>tests.LoginTest@53ce1329</td></tr>
+<td>tests.LoginTest@3e11f9e9</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -143,75 +402,70 @@ Caused by: java.lang.NullPointerException: Cannot invoke &quot;org.openqa.seleni
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.Sys_UnitInforTest.editUnitInformationSuccess()'><b>editUnitInformationSuccess</b><br>Test class: tests.Sys_UnitInforTest</td>
+<td title='tests.Cat_CustomerTest.clickCategory()'><b>clickCategory</b><br>Test class: tests.Cat_CustomerTest</td>
 <td></td>
-<td>5</td>
-<td>tests.Sys_UnitInforTest@2c1b194a</td></tr>
+<td>0</td>
+<td>tests.Cat_CustomerTest@36916eb0</td></tr>
 <tr>
-<td title='tests.Sys_UserAdminTest.create1RequiredFieldBlank2()'><b>create1RequiredFieldBlank2</b><br>Test class: tests.Sys_UserAdminTest</td>
+<td title='tests.Cat_CustomerTest.create1RequiredFieldBlank2()'><b>create1RequiredFieldBlank2</b><br>Test class: tests.Cat_CustomerTest</td>
 <td></td>
-<td>1</td>
-<td>tests.Sys_UserAdminTest@550dbc7a</td></tr>
-<tr>
-<td title='tests.Sys_UserAdminTest.notClickApprovedSuccess()'><b>notClickApprovedSuccess</b><br>Test class: tests.Sys_UserAdminTest</td>
-<td></td>
-<td>3</td>
-<td>tests.Sys_UserAdminTest@550dbc7a</td></tr>
+<td>2</td>
+<td>tests.Cat_CustomerTest@36916eb0</td></tr>
 <tr>
 <td title='tests.LoginTest.loginWithBlankField()'><b>loginWithBlankField</b><br>Test class: tests.LoginTest</td>
 <td></td>
 <td>0</td>
-<td>tests.LoginTest@53ce1329</td></tr>
+<td>tests.LoginTest@3e11f9e9</td></tr>
 <tr>
-<td title='tests.Sys_UnitInforTest.backunitInformation()'><b>backunitInformation</b><br>Test class: tests.Sys_UnitInforTest</td>
+<td title='tests.Cat_CustomerTest.editCustomer()'><b>editCustomer</b><br>Test class: tests.Cat_CustomerTest</td>
+<td></td>
+<td>4</td>
+<td>tests.Cat_CustomerTest@36916eb0</td></tr>
+<tr>
+<td title='tests.Cat_CustomerUploadTest.clickCustomerUpload()'><b>clickCustomerUpload</b><br>Test class: tests.Cat_CustomerUploadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.Cat_CustomerUploadTest@7bab3f1a</td></tr>
+<tr>
+<td title='tests.Cat_CustomerUploadTest.createCustomerUploadFail1()'><b>createCustomerUploadFail1</b><br>Test class: tests.Cat_CustomerUploadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.Cat_CustomerUploadTest@7bab3f1a</td></tr>
+<tr>
+<td title='tests.Cat_CustomerTest.clickCustomer()'><b>clickCustomer</b><br>Test class: tests.Cat_CustomerTest</td>
+<td></td>
+<td>0</td>
+<td>tests.Cat_CustomerTest@36916eb0</td></tr>
+<tr>
+<td title='tests.Cat_CustomerTest.checkCustomer()'><b>checkCustomer</b><br>Test class: tests.Cat_CustomerTest</td>
+<td></td>
+<td>0</td>
+<td>tests.Cat_CustomerTest@36916eb0</td></tr>
+<tr>
+<td title='tests.Cat_CustomerTest.deleteCustomer()'><b>deleteCustomer</b><br>Test class: tests.Cat_CustomerTest</td>
+<td></td>
+<td>3</td>
+<td>tests.Cat_CustomerTest@36916eb0</td></tr>
+<tr>
+<td title='tests.Cat_CustomerTest.createCustomerSuccess()'><b>createCustomerSuccess</b><br>Test class: tests.Cat_CustomerTest</td>
+<td></td>
+<td>3</td>
+<td>tests.Cat_CustomerTest@36916eb0</td></tr>
+<tr>
+<td title='tests.Cat_CustomerTest.createBlankAll()'><b>createBlankAll</b><br>Test class: tests.Cat_CustomerTest</td>
 <td></td>
 <td>2</td>
-<td>tests.Sys_UnitInforTest@2c1b194a</td></tr>
+<td>tests.Cat_CustomerTest@36916eb0</td></tr>
 <tr>
-<td title='tests.Sys_UserAdminTest.clickApprovedSuccess()'><b>clickApprovedSuccess</b><br>Test class: tests.Sys_UserAdminTest</td>
+<td title='tests.Cat_CustomerTest.create1RequiredFieldBlank1()'><b>create1RequiredFieldBlank1</b><br>Test class: tests.Cat_CustomerTest</td>
 <td></td>
 <td>2</td>
-<td>tests.Sys_UserAdminTest@550dbc7a</td></tr>
+<td>tests.Cat_CustomerTest@36916eb0</td></tr>
 <tr>
-<td title='tests.Sys_UserAdminTest.create1RequiredFieldBlank1()'><b>create1RequiredFieldBlank1</b><br>Test class: tests.Sys_UserAdminTest</td>
+<td title='tests.Cat_CustomerTest.create1RequiredFieldBlank3()'><b>create1RequiredFieldBlank3</b><br>Test class: tests.Cat_CustomerTest</td>
 <td></td>
-<td>1</td>
-<td>tests.Sys_UserAdminTest@550dbc7a</td></tr>
-<tr>
-<td title='tests.Sys_UserAdminTest.createBlankAll()'><b>createBlankAll</b><br>Test class: tests.Sys_UserAdminTest</td>
-<td></td>
-<td>1</td>
-<td>tests.Sys_UserAdminTest@550dbc7a</td></tr>
-<tr>
-<td title='tests.Sys_UnitInforTest.clickSystem()'><b>clickSystem</b><br>Test class: tests.Sys_UnitInforTest</td>
-<td></td>
-<td>0</td>
-<td>tests.Sys_UnitInforTest@2c1b194a</td></tr>
-<tr>
-<td title='tests.Sys_UserAdminTest.create1RequiredFieldBlank4()'><b>create1RequiredFieldBlank4</b><br>Test class: tests.Sys_UserAdminTest</td>
-<td></td>
-<td>0</td>
-<td>tests.Sys_UserAdminTest@550dbc7a</td></tr>
-<tr>
-<td title='tests.Sys_UserAdminTest.clickUserAdministration()'><b>clickUserAdministration</b><br>Test class: tests.Sys_UserAdminTest</td>
-<td></td>
-<td>0</td>
-<td>tests.Sys_UserAdminTest@550dbc7a</td></tr>
-<tr>
-<td title='tests.Sys_UserAdminTest.checkAccountClickApproved()'><b>checkAccountClickApproved</b><br>Test class: tests.Sys_UserAdminTest</td>
-<td></td>
-<td>0</td>
-<td>tests.Sys_UserAdminTest@550dbc7a</td></tr>
-<tr>
-<td title='tests.Sys_UserAdminTest.create1RequiredFieldBlank3()'><b>create1RequiredFieldBlank3</b><br>Test class: tests.Sys_UserAdminTest</td>
-<td></td>
-<td>0</td>
-<td>tests.Sys_UserAdminTest@550dbc7a</td></tr>
-<tr>
-<td title='tests.Sys_UserAdminTest.reEnterPasswordDifferentPassword()'><b>reEnterPasswordDifferentPassword</b><br>Test class: tests.Sys_UserAdminTest</td>
-<td></td>
-<td>1</td>
-<td>tests.Sys_UserAdminTest@550dbc7a</td></tr>
+<td>2</td>
+<td>tests.Cat_CustomerTest@36916eb0</td></tr>
 </table><p>
 </body>
 </html>

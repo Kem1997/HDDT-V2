@@ -85,7 +85,7 @@ public class Sys_UserAdminTest extends BaseTest {
 		useradministration.back.click();
 		useradministration.clickAddUser();
 		useradministration.addUser("test1", "Nguyễn Văn A", "test@gmail.com", "Abcd@123456", "Abcd@123456");
-		Assert.assertEquals(useradministration.message.getText(), "Tạo mới người dùng thành công.");
+		Assert.assertEquals(useradministration.messageSuccess.getText(), "Tạo mới người dùng thành công.");
 	}
 
 	@Test
@@ -94,25 +94,15 @@ public class Sys_UserAdminTest extends BaseTest {
 		useradministration = new Sys_UserAdminPage(getDriver());
 		useradministration.checkAccount(useradministration.acc.getText(), "test1");
 	}
-	
-	@Test
-	public void editAccount() {
-		
-	}
 
 	@Test
 	public void notClickApprovedSuccess() {
 		// Không nhấn nút kích hoạt
 		Sys_UserAdminPage useradministration;
 		useradministration = new Sys_UserAdminPage(getDriver());
-		try {
-			Thread.sleep(2000);
-		} catch (Exception e) {
-			// TODO: handle exception
-		}
 		useradministration.clickAddUser();
 		useradministration.addUserNotApproved("test2", "Nguyễn Văn B", "test@gmail.com", "Abcd@123456", "Abcd@123456");
-		Assert.assertEquals(useradministration.message.getText(), "Tạo mới người dùng thành công.");
+		Assert.assertEquals(useradministration.messageSuccess.getText(), "Tạo mới người dùng thành công.");
 	}
 
 	@Test
@@ -120,5 +110,31 @@ public class Sys_UserAdminTest extends BaseTest {
 		Sys_UserAdminPage useradministration;
 		useradministration = new Sys_UserAdminPage(getDriver());
 		useradministration.checkAccount(useradministration.acc.getText(), "test2");
+	}
+	
+	@Test
+	public void editAccountSuccess() {
+		Sys_UserAdminPage useradministration;
+		useradministration = new Sys_UserAdminPage(getDriver());
+		useradministration.clickEditAccount("test2");
+		useradministration.editAccount();
+		Assert.assertEquals(useradministration.messageSuccess.getText(), "Sửa tài khoản thành công.");
+	}
+	
+	@Test
+	public void deleteSuccess() {
+		//TH tài khoản không được phân quyền quản trị mới xóa được
+		Sys_UserAdminPage useradministration;
+		useradministration = new Sys_UserAdminPage(getDriver());
+		useradministration.deleteAccount("test2");
+		Assert.assertEquals(useradministration.messageSuccess.getText(), "Xóa tài khoản thành công.");
+	}
+	
+	public void deleteFailed() {
+		//TH tài khoản được phân quyền admin thì sẽ không xóa được
+		Sys_UserAdminPage useradministration;
+		useradministration = new Sys_UserAdminPage(getDriver());
+		useradministration.deleteAccount("test1");
+		Assert.assertEquals(useradministration.messageError.getText(), "Không được xóa tài khoản này.");
 	}
 }
