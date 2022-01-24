@@ -22,4 +22,8 @@ public class DK_DangKySuDungPage extends BaseTest {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+	
+	public void clickCatDKSD() {
+		catDKSD.click();
+	}
 }

@@ -5,6 +5,16 @@
     <parameter name="testname" value="test1"/>
     <parameter name="user" value="user1"/>
     <classes>
+      <class name="tests.DK_DangKyDaiSoTest">
+        <methods>
+          <include name="editAnnouncement"/>
+          <include name="deleteAnnouncement"/>
+          <include name="acceptAnnouncementSuccess"/>
+          <include name="createAnnouncementSuccess"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- tests.DK_DangKyDaiSoTest -->
       <class name="tests.LoginTest">
         <methods>
           <include name="loginByAdmin"/>

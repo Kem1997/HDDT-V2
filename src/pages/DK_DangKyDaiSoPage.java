@@ -17,7 +17,7 @@ public class DK_DangKyDaiSoPage extends BaseTest {
 	static WebElement addannouncement;
 
 	@FindBy(xpath = "//button[@id='Create']")
-	static WebElement create;
+	public static WebElement create;
 
 	@FindBy(xpath = "//select[@id='RegisterName']")
 	static WebElement pattern;
@@ -64,6 +64,27 @@ public class DK_DangKyDaiSoPage extends BaseTest {
 	@FindBy(xpath = "//tr//td[8]//span")
 	static WebElement deleteinvoicetype;
 
+	@FindBy(xpath = "//button[@onclick='Save_Click()']")
+	static WebElement savenotifications;
+
+	@FindBy(xpath = "//tr[1]//td[6]//a/i")
+	static WebElement view;
+
+	@FindBy(xpath = "//button[@onclick='Publish_click(0);']")
+	static WebElement sendnotifications;
+
+	@FindBy(xpath = "//button[@onclick='Publish_click(0);']")
+	static WebElement acceptnotifications;
+
+	@FindBy(xpath = "//tr[1]//td[7]//a/i")
+	static WebElement editannouncement;
+
+	@FindBy(xpath = "//tr[1]//td[8]//a/i")
+	static WebElement deleteannouncement;
+
+	@FindBy(xpath = "//tr[1]//td[5]")
+	static WebElement status;
+
 	public DK_DangKyDaiSoPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -82,7 +103,8 @@ public class DK_DangKyDaiSoPage extends BaseTest {
 		dropdown.selectByVisibleText(obj);
 	}
 
-	public void addAnnouncement(String Serial, String Year, String Quantity, String StartDate) {
+	public void addInvoiceType(String Serial, String Year, String Quantity, String StartDate) {
+		
 		selectPattern(pattern, "78VATTEMP");
 
 		serial.clear();
@@ -111,7 +133,7 @@ public class DK_DangKyDaiSoPage extends BaseTest {
 
 	public void editInvoiceType(String Serial, String Year, String Quantity, String StartDate) {
 		editinvoicetype.click();
-		
+
 		selectPattern(pattern, "78VATTEMP");
 
 		serial.clear();
@@ -133,8 +155,48 @@ public class DK_DangKyDaiSoPage extends BaseTest {
 			// TODO: handle exception
 		}
 	}
-	
+
 	public void deleteInvoiceType() {
 		deleteinvoicetype.click();
+	}
+
+	public void addAnnounncement() {
+		addInvoiceType("AA", "22", "2000", "24/01/2022");
+
+		savenotifications.click();
+		try {
+			Thread.sleep(1000);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+	public void editAnnouncement() {
+		editannouncement.click();
+		addInvoiceType("BB", "22", "2000", "24/01/2022");
+
+		savenotifications.click();
+		try {
+			Thread.sleep(1000);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+	public void deleteAnnouncemnet() {
+		deleteannouncement.click();
+	}
+
+	public void acceptAnnouncement() {
+		if (status.getText().equals("Mới lập")) {
+			view.click();
+			sendnotifications.click();
+			acceptnotifications.click();
+			try {
+				Thread.sleep(1000);
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
 	}
 }

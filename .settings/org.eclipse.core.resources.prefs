@@ -2,6 +2,7 @@ eclipse.preferences.version=1
 encoding//src/pages/Cat_CustomerPage.java=UTF-8
 encoding//src/pages/DK_DangKyDaiSoPage.java=UTF-8
 encoding//src/pages/DK_DangKySuDungPage.java=UTF-8
+encoding//src/pages/InvM_InvoiceListPage.java=UTF-8
 encoding//src/pages/LoginPage.java=UTF-8
 encoding//src/pages/Sys_UnitInforPage.java=UTF-8
 encoding//src/pages/Sys_UserAdminPage.java=UTF-8
