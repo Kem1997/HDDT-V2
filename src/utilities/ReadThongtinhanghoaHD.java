@@ -74,16 +74,16 @@ public class ReadThongtinhanghoaHD {
 					hanghoa.setHinhthuc((String) getCellValue(cell));
 					break;
 				case COLUMN_INDEX_Tenhanghoa:
-					hanghoa.setTenhanghoa(getCellValue(cell).toString());
+					hanghoa.setTenhanghoa((String) getCellValue(cell));
 					break;
 				case COLUMN_INDEX_Donvitinh:
-					hanghoa.setDonvitinh(getCellValue(cell).toString());
+					hanghoa.setDonvitinh((String) getCellValue(cell));
 					break;
 				case COLUMN_INDEX_Soluong:
 					hanghoa.setSoluong(getCellValue(cell).toString());
 					break;
 				case COLUMN_INDEX_Dongia:
-					hanghoa.setDongia((String) getCellValue(cell));
+					hanghoa.setDongia(getCellValue(cell).toString());
 					break;
 
 				default:

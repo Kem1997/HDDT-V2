@@ -107,17 +107,24 @@
 <!-- 				</methods> -->
 <!-- 			</class> -->
 			
-			<class name="tests.DK_DangKyDaiSoTest">
+<!-- 			<class name="tests.DK_DangKyDaiSoTest"> -->
+<!-- 				<methods> -->
+<!-- 					<include name="clickDangKyDaiSo" /> -->
+<!-- 					<include name="chooseInvoiceTypeFail" /> -->
+<!-- 					<include name="chooseInvoiceTypeSuccess" />					 -->
+<!-- 					<include name="editInvoiceType" /> -->
+<!-- 					<include name="deleteInvoiceType" /> -->
+<!-- 					<include name="createAnnouncementSuccess" /> -->
+<!-- 					<include name="editAnnouncement" /> -->
+<!-- 					<include name="deleteAnnouncement" /> -->
+<!-- 					<include name="acceptAnnouncementSuccess" /> -->
+<!-- 				</methods> -->
+<!-- 			</class> -->
+			
+			<class name="tests.InvM_InvoiceListTest">
 				<methods>
-					<include name="clickDangKyDaiSo" />
-					<include name="chooseInvoiceTypeFail" />
-					<include name="chooseInvoiceTypeSuccess" />					
-					<include name="editInvoiceType" />
-					<include name="deleteInvoiceType" />
-					<include name="createAnnouncementSuccess" />
-					<include name="editAnnouncement" />
-					<include name="deleteAnnouncement" />
-					<include name="acceptAnnouncementSuccess" />
+					<include name="clickInvoiceManagement" />
+					<include name="laphoadonSuccess" />
 				</methods>
 			</class>
 		</classes>

@@ -12,7 +12,7 @@ public class ThongTinHD {
 		private String Hinhthucthanhtoan;
 		private String Ghichu;
 		private String ThueGTGT;
-		
+
 		public List<HangHoa> dshanghoa;
 
 		public String getStt() {
@@ -79,20 +79,20 @@ public class ThongTinHD {
 			Ghichu = ghichu;
 		}
 
-		public String getThueGTGT() {
-			return ThueGTGT;
-		}
-
-		public void setThueGTGT(String thueGTGT) {
-			ThueGTGT = thueGTGT;
-		}
-
 		public List<HangHoa> getDsvattu() {
 			return dshanghoa;
 		}
 
 		public void setDsvattu(List<HangHoa> dshanghoa) {
 			this.dshanghoa = dshanghoa;
+		}
+		
+		public String getThueGTGT() {
+			return ThueGTGT;
+		}
+
+		public void setThueGTGT(String thueGTGT) {
+			ThueGTGT = thueGTGT;
 		}
 		
 		public ThongTinHD() {

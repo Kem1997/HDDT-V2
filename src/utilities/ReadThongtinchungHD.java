@@ -95,9 +95,11 @@ public class ReadThongtinchungHD {
 				case COLUMN_INDEX_Ghichu:
 					thongtinhd.setGhichu((String) getCellValue(cell));
 					break;
+					
 				case COLUMN_INDEX_ThueGTGT:
 					thongtinhd.setThueGTGT((String) getCellValue(cell));
 					break;
+	
 				default:
 					break;
 				}

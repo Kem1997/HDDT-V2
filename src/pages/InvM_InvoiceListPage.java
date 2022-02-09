@@ -65,6 +65,9 @@ public class InvM_InvoiceListPage extends BaseTest {
 
 	@FindBy(xpath = "//input[@id='mAmount']")
 	static WebElement tongcongtientt;
+	
+	@FindBy(xpath = "//div[@class='messagebox']")
+	public static WebElement title;
 
 	public InvM_InvoiceListPage(WebDriver driver) {
 		this.driver = driver;
@@ -74,16 +77,24 @@ public class InvM_InvoiceListPage extends BaseTest {
 	public void clickInvManagement() {
 		invoicemanagement.click();
 	}
+	
+	public void clickInvoiceList() {
+		invoicelist.click();
+	}
+	
+	public void clickCreateInvoice() {
+		create.click();
+	}
 
-	public List<ThongTinHD> getThongTinHD(String user, String caseTest) {
+	public List<ThongTinHD> getThongTinHD() {
 		List<ThongTinHD> listthongtinhd = new ArrayList<ThongTinHD>();
 		List<HangHoa> listhanghoa = new ArrayList<HangHoa>();
 		try {
 			listthongtinhd = ReadThongtinchungHD.readExcel(
-					System.getProperty("user.dir") + "/data/dataThongtinchungXuat_" + user + "/" + caseTest + ".xlsx",
+					System.getProperty("user.dir") + "/data/dataThongtinHD.xlsx",
 					0);
 			listhanghoa = ReadThongtinhanghoaHD.readExcel(
-					System.getProperty("user.dir") + "/data/dataThongtinvattuXuat_" + user + "/" + caseTest + ".xlsx",
+					System.getProperty("user.dir") + "/data/dataThongtinhanghoa.xlsx",
 					0);
 
 			for (ThongTinHD thongtinhd : listthongtinhd) {
@@ -101,9 +112,9 @@ public class InvM_InvoiceListPage extends BaseTest {
 		return listthongtinhd;
 	}
 
-	public void lapHoaDon(String tendonvi, String user, String caseTest) throws Exception {
+	public void lapHoaDon() throws Exception  {
 		List<ThongTinHD> listthongtinhd = new ArrayList<ThongTinHD>();
-		listthongtinhd = getThongTinHD(user, caseTest);
+		listthongtinhd = getThongTinHD();
 		for (int i = 0; i < listthongtinhd.size(); i++) {
 			if (listthongtinhd.get(i) != null) {
 				cuscode.sendKeys(listthongtinhd.get(i).getMakhachhang());
@@ -133,11 +144,11 @@ public class InvM_InvoiceListPage extends BaseTest {
 			float total = 0, vatamount = 0, amount = 0;
 
 			List<HangHoa> listhh = listthongtinhd.get(i).dshanghoa;
-			for (int j = 1; j < listhh.size(); j++) {
+			for (int j = 0; j < listhh.size(); j++) {
 				if (listhh.get(j) != null) {
 
 					// Lay dong hang hoa
-					WebElement stt = driver.findElement(By.xpath("//td[text()='" + j + "']"));
+					WebElement stt = driver.findElement(By.xpath("//td[text()='" + (j+1) + "']"));
 					WebElement dongchuahanghoa = stt.findElement(By.xpath("//parent::tr"));
 
 					// Chon Hinh thuc
@@ -170,10 +181,12 @@ public class InvM_InvoiceListPage extends BaseTest {
 
 					WebElement dongia = dongchuahanghoa.findElement(By.xpath("//td[7]//input"));
 					dongia.sendKeys(listhh.get(j).getDongia());
-
+					
 					// Kiem tra thanh tien dong
 					WebElement thanhtien = dongchuahanghoa.findElement(By.xpath("//td[8]//input"));
-					String thanhtientext = thanhtien.getText();
+					thanhtien.click();
+					String thanhtientextcodauphay = thanhtien.getAttribute("value");
+					String thanhtientext=thanhtientextcodauphay.replace(",", "");
 					Float thanhtienso = Float.parseFloat(thanhtientext);
 					if (Float.parseFloat(listhh.get(j).getSoluong())
 							* Float.parseFloat(listhh.get(j).getDongia()) != thanhtienso) {
@@ -187,7 +200,7 @@ public class InvM_InvoiceListPage extends BaseTest {
 			}
 
 			// So sanh tong tien dich vu
-			if (Float.parseFloat(tongtiendichvu.getText()) != total) {
+			if (Float.parseFloat(tongtiendichvu.getAttribute("value").replace(",", "")) != total) {
 				throw new Exception("SAI TONG TIEN DICH VU O HOA DON" + i);
 			}
 
@@ -211,12 +224,12 @@ public class InvM_InvoiceListPage extends BaseTest {
 			}
 
 			// So sanh Tien thue GTGT
-			if (Float.parseFloat(tienthuegtgt.getText()) != vatamount) {
+			if (Float.parseFloat(tienthuegtgt.getAttribute("value").replace(",", "")) != vatamount) {
 				throw new Exception("SAI TIEN THUE GTGT O HOA DON" + i);
 			}
 
 			// So sanh Tong cong tien thanh toan
-			if (Float.parseFloat(tongcongtientt.getText()) != amount) {
+			if (Float.parseFloat(tongcongtientt.getAttribute("value").replace(",", "")) != amount) {
 				throw new Exception("SAI TONG CONG TIEN THANH TOAN O HOA DON" + i);
 			}
 
