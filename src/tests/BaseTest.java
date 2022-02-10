@@ -20,11 +20,13 @@ public class BaseTest {
 	@Parameters( {"testname"} )// dùng để lấy ra giá trị testname trong file xml 
 	public void setUp(String testname) { // khai báo 1 tham số truyền vào có giá trị bằng giá trị của testname dòng trên
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/chromedriver.exe");
+		// Chạy ngầm
 //		ChromeOptions options = new ChromeOptions();
 //		options.addArguments("--headless", "--disable-gpu","--ignore-certificate-errors","--disable-extensions",
 //				"--no-sandbox","--disable-dev-shm-usage","--disable-renderer-backgrounding",
 //				"--disable-background-timer-throttling","--disable-backgrounding-occluded-windows","--window-size=1920,1080","--start-maximized");
 //		driver = new ChromeDriver(options);
+		// Không chạy ngầm
 		driver = new ChromeDriver();
 		DriverFactory.getInstance().setDriver(driver);// Tạo ra 1 driver riêng biệt cho từng luồng chạy
 		driver=DriverFactory.getInstance().getDriver();// gán giá trị cho driver trống

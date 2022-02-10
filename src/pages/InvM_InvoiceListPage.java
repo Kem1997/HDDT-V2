@@ -86,15 +86,15 @@ public class InvM_InvoiceListPage extends BaseTest {
 		create.click();
 	}
 
-	public List<ThongTinHD> getThongTinHD() {
+	public List<ThongTinHD> getThongTinHD(String casetest) {
 		List<ThongTinHD> listthongtinhd = new ArrayList<ThongTinHD>();
 		List<HangHoa> listhanghoa = new ArrayList<HangHoa>();
 		try {
 			listthongtinhd = ReadThongtinchungHD.readExcel(
-					System.getProperty("user.dir") + "/data/dataThongtinHD.xlsx",
+					System.getProperty("user.dir") + "/data/dataThongtinHD_" + casetest +  ".xlsx",
 					0);
 			listhanghoa = ReadThongtinhanghoaHD.readExcel(
-					System.getProperty("user.dir") + "/data/dataThongtinhanghoa.xlsx",
+					System.getProperty("user.dir") + "/data/dataThongtinhanghoa_" + casetest + ".xlsx",
 					0);
 
 			for (ThongTinHD thongtinhd : listthongtinhd) {
@@ -112,17 +112,23 @@ public class InvM_InvoiceListPage extends BaseTest {
 		return listthongtinhd;
 	}
 
-	public void lapHoaDon() throws Exception  {
+	public void lapHoaDon(String casetest) throws Exception  {
 		List<ThongTinHD> listthongtinhd = new ArrayList<ThongTinHD>();
-		listthongtinhd = getThongTinHD();
+		listthongtinhd = getThongTinHD(casetest);
 		for (int i = 0; i < listthongtinhd.size(); i++) {
 			if (listthongtinhd.get(i) != null) {
+				cuscode.clear();
 				cuscode.sendKeys(listthongtinhd.get(i).getMakhachhang());
+				byername.clear();
 				byername.sendKeys(listthongtinhd.get(i).getHotennguoimua());
+				cusname.clear();
 				cusname.sendKeys(listthongtinhd.get(i).getDonvimua());
+				custaxcode.clear();
 				custaxcode.sendKeys(listthongtinhd.get(i).getMasothue());
+				cusaddress.clear();
 				cusaddress.sendKeys(listthongtinhd.get(i).getDiachi());
 				paymentmethod.sendKeys(listthongtinhd.get(i).getHinhthucthanhtoan());
+				note.clear();
 				note.sendKeys(listthongtinhd.get(i).getGhichu());
 				vatrate.click();
 				try {
@@ -148,7 +154,7 @@ public class InvM_InvoiceListPage extends BaseTest {
 				if (listhh.get(j) != null) {
 
 					// Lay dong hang hoa
-					WebElement stt = driver.findElement(By.xpath("//td[text()='" + (j+1) + "']"));
+					WebElement stt = driver.findElement(By.xpath("//td[text()='" + (2+1) + "']"));
 					WebElement dongchuahanghoa = stt.findElement(By.xpath("//parent::tr"));
 
 					// Chon Hinh thuc
@@ -171,15 +177,19 @@ public class InvM_InvoiceListPage extends BaseTest {
 
 					// Lay ten hang hoa
 					WebElement tenhanghoa = dongchuahanghoa.findElement(By.xpath("//td[4]//input"));
+					tenhanghoa.clear();
 					tenhanghoa.sendKeys(listhh.get(j).getTenhanghoa());
 
 					WebElement donvitinh = dongchuahanghoa.findElement(By.xpath("//td[5]//input"));
+					donvitinh.clear();
 					donvitinh.sendKeys(listhh.get(j).getDonvitinh());
 
 					WebElement soluong = dongchuahanghoa.findElement(By.xpath("//td[6]//input"));
+					soluong.clear();
 					soluong.sendKeys(listhh.get(j).getSoluong());
 
 					WebElement dongia = dongchuahanghoa.findElement(By.xpath("//td[7]//input"));
+					dongia.clear();
 					dongia.sendKeys(listhh.get(j).getDongia());
 					
 					// Kiem tra thanh tien dong
