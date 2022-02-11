@@ -68,6 +68,9 @@ public class InvM_InvoiceListPage extends BaseTest {
 	
 	@FindBy(xpath = "//div[@class='messagebox']")
 	public static WebElement title;
+	
+	@FindBy(xpath = "//p[text()='Tiền chiết khấu không được vượt quá tiền hóa đơn.']")
+	public static WebElement messageError;
 
 	public InvM_InvoiceListPage(WebDriver driver) {
 		this.driver = driver;
@@ -147,18 +150,17 @@ public class InvM_InvoiceListPage extends BaseTest {
 				}
 			}
 
-			float total = 0, vatamount = 0, amount = 0;
+			float totalhh = 0, totalck = 0, total = 0, vatamount = 0, amount = 0;
 
 			List<HangHoa> listhh = listthongtinhd.get(i).dshanghoa;
 			for (int j = 0; j < listhh.size(); j++) {
 				if (listhh.get(j) != null) {
 
 					// Lay dong hang hoa
-					WebElement stt = driver.findElement(By.xpath("//td[text()='" + (2+1) + "']"));
-					WebElement dongchuahanghoa = stt.findElement(By.xpath("//parent::tr"));
+					WebElement stt = driver.findElement(By.xpath("//td[text()='" + (j+1) + "']"));
 
 					// Chon Hinh thuc
-					WebElement hinhthuc = dongchuahanghoa.findElement(By.xpath("//td[3]"));
+					WebElement hinhthuc = driver.findElement(By.xpath("//td[text()='" + (j+1) + "']//parent::tr//td[3]"));
 					hinhthuc.click();
 					try {
 						Thread.sleep(2000);
@@ -166,34 +168,50 @@ public class InvM_InvoiceListPage extends BaseTest {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-					List<WebElement> optionsToSelectHinhthuc = dongchuahanghoa
-							.findElements(By.xpath("//div//select//option"));
+					List<WebElement> optionsToSelectHinhthuc = driver
+							.findElements(By.xpath("//td[text()='" + (j+1) + "']//parent::tr//div//select//option"));
 					for (WebElement option : optionsToSelectHinhthuc) {
 						if (option.getText().contains(listhh.get(j).getHinhthuc())) {
 							option.click();
 							break;
 						}
 					}
+					
+					// Tinh tong tien dich vu
+					if (listhh.get(j).getHinhthuc().equals("Hàng hóa")) {
+						totalhh = totalhh + Float.parseFloat(listhh.get(j).getSoluong())
+						* Float.parseFloat(listhh.get(j).getDongia());
+					}
+					
+					if(listhh.get(j).getHinhthuc().equals("Chiết khấu")) {
+					totalck = totalck - Float.parseFloat(listhh.get(j).getSoluong())
+							* Float.parseFloat(listhh.get(j).getDongia());
+					}	
+					
+					total=totalck+totalhh;
+					if(total<0) {
+						throw new Exception("Tiền chiết khấu không được vượt quá tiền hóa đơn.");
+					}
 
 					// Lay ten hang hoa
-					WebElement tenhanghoa = dongchuahanghoa.findElement(By.xpath("//td[4]//input"));
+					WebElement tenhanghoa = driver.findElement(By.xpath("//td[text()='" + (j+1) + "']//parent::tr//td[4]//input"));
 					tenhanghoa.clear();
 					tenhanghoa.sendKeys(listhh.get(j).getTenhanghoa());
 
-					WebElement donvitinh = dongchuahanghoa.findElement(By.xpath("//td[5]//input"));
+					WebElement donvitinh = driver.findElement(By.xpath("//td[text()='" + (j+1) + "']//parent::tr//td[5]//input"));
 					donvitinh.clear();
 					donvitinh.sendKeys(listhh.get(j).getDonvitinh());
 
-					WebElement soluong = dongchuahanghoa.findElement(By.xpath("//td[6]//input"));
+					WebElement soluong = driver.findElement(By.xpath("//td[text()='" + (j+1) + "']//parent::tr//td[6]//input"));
 					soluong.clear();
 					soluong.sendKeys(listhh.get(j).getSoluong());
 
-					WebElement dongia = dongchuahanghoa.findElement(By.xpath("//td[7]//input"));
+					WebElement dongia = driver.findElement(By.xpath("//td[text()='" + (j+1) + "']//parent::tr//td[7]//input"));
 					dongia.clear();
 					dongia.sendKeys(listhh.get(j).getDongia());
 					
 					// Kiem tra thanh tien dong
-					WebElement thanhtien = dongchuahanghoa.findElement(By.xpath("//td[8]//input"));
+					WebElement thanhtien = driver.findElement(By.xpath("//td[text()='" + (j+1) + "']//parent::tr//td[8]//input"));
 					thanhtien.click();
 					String thanhtientextcodauphay = thanhtien.getAttribute("value");
 					String thanhtientext=thanhtientextcodauphay.replace(",", "");
@@ -203,9 +221,6 @@ public class InvM_InvoiceListPage extends BaseTest {
 						throw new Exception("SAI O HANG HOA " + listhh.get(j).getTenhanghoa() + "O HOA DON" + i);
 					}
 
-					// Tinh tong tien dich vu
-					total = total + Float.parseFloat(listhh.get(j).getSoluong())
-							* Float.parseFloat(listhh.get(j).getDongia());
 				}
 			}
 
@@ -245,5 +260,14 @@ public class InvM_InvoiceListPage extends BaseTest {
 
 			save.click();
 		}
+	}
+	
+	public void clickSuaHoaDon() {
+		WebElement sua_ds = driver.findElement(By.xpath("//td[contains(text(),'1')]//parent::tr//td[8]"));
+		sua_ds.click();
+	}
+	
+	public void xoaDongHangHoa() {
+		
 	}
 }

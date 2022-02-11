@@ -12,13 +12,6 @@
           <include name="setUp"/>
         </methods>
       </class> <!-- tests.LoginTest -->
-      <class name="tests.InvM_InvoiceListTest">
-        <methods>
-          <include name="laphoadonnhieudongSuccess"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- tests.InvM_InvoiceListTest -->
     </classes>
   </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Suite] -->

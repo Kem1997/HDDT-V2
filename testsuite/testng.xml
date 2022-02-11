@@ -129,6 +129,11 @@
 <!-- 					<include name="laphoadonFail3" /> -->
 <!-- 					<include name="laphoadon1dongSuccess" /> -->
 					<include name="laphoadonnhieudongSuccess" />
+					<include name="laphoadonkhongchiuthue" />
+					<include name="laphoadonthue0" />
+					<include name="laphoadonthue5" />
+					<include name="laphoadonthue10" />
+
 				</methods>
 			</class>
 		</classes>

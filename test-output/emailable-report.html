@@ -9,20 +9,11 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test1</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">1,247,807</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test1</a></td><td class="num">7</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">223,178</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test1 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.InvM_InvoiceListTest</td><td><a href="#m0">laphoadonnhieudongSuccess</a></td><td rowspan="1">1644481415011</td><td rowspan="1">1191421</td></tr><tr class="failedodd"><td rowspan="1">tests.LoginTest</td><td><a href="#m1">loginByAdmin</a></td><td rowspan="1">1644481364128</td><td rowspan="1">10845</td></tr><tr><th colspan="4">Test1 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">tests.InvM_InvoiceListTest</td><td><a href="#m2">clickInvoiceManagement</a></td><td rowspan="1">1644481374982</td><td rowspan="1">98</td></tr><tr class="passedeven"><td><a href="#m3">laphoadon1dongSuccess</a></td><td rowspan="1">1644481375082</td><td rowspan="1">39924</td></tr><tr class="passedodd"><td rowspan="1">tests.LoginTest</td><td><a href="#m4">loginWithBlankField</a></td><td rowspan="1">1644481362954</td><td rowspan="1">1171</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test1 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.LoginTest</td><td><a href="#m0">loginByAdmin</a></td><td rowspan="1">1644555004698</td><td rowspan="1">10771</td></tr><tr><th colspan="4">Test1 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="6">tests.InvM_InvoiceListTest</td><td><a href="#m1">clickInvoiceManagement</a></td><td rowspan="1">1644555015483</td><td rowspan="1">96</td></tr><tr class="passedeven"><td><a href="#m2">laphoadonkhongchiuthue</a></td><td rowspan="1">1644555079763</td><td rowspan="1">36160</td></tr><tr class="passedeven"><td><a href="#m3">laphoadonnhieudongSuccess</a></td><td rowspan="1">1644555015588</td><td rowspan="1">64173</td></tr><tr class="passedeven"><td><a href="#m4">laphoadonthue0</a></td><td rowspan="1">1644555115924</td><td rowspan="1">35589</td></tr><tr class="passedeven"><td><a href="#m5">laphoadonthue10</a></td><td rowspan="1">1644555187097</td><td rowspan="1">35496</td></tr><tr class="passedeven"><td><a href="#m6">laphoadonthue5</a></td><td rowspan="1">1644555151514</td><td rowspan="1">35581</td></tr><tr class="passedodd"><td rowspan="1">tests.LoginTest</td><td><a href="#m7">loginWithBlankField</a></td><td rowspan="1">1644555003906</td><td rowspan="1">788</td></tr></tbody>
 </table>
-<h2>Test1</h2><h3 id="m0">tests.InvM_InvoiceListTest#laphoadonnhieudongSuccess</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Exception: SAI O HANG HOA Điện thoại sam sung galaxy a10O HOA DON0
-	at pages.InvM_InvoiceListPage.lapHoaDon(InvM_InvoiceListPage.java:203)
-	at tests.InvM_InvoiceListTest.laphoadonnhieudongSuccess(InvM_InvoiceListTest.java:62)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.LoginTest#loginByAdmin</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.awaitility.core.ConditionTimeoutException: Condition with tests.LoginTest was not fulfilled within 10 seconds.
+<h2>Test1</h2><h3 id="m0">tests.LoginTest#loginByAdmin</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.awaitility.core.ConditionTimeoutException: Condition with tests.LoginTest was not fulfilled within 10 seconds.
 	at org.awaitility.core.ConditionAwaiter.await(ConditionAwaiter.java:165)
 	at org.awaitility.core.CallableCondition.await(CallableCondition.java:78)
 	at org.awaitility.core.CallableCondition.await(CallableCondition.java:26)
@@ -41,8 +32,12 @@ Caused by: java.lang.NullPointerException: Cannot invoke &quot;org.openqa.seleni
 	at org.awaitility.core.ConditionAwaiter$ConditionPoller.call(ConditionAwaiter.java:209)
 	... 4 more
 ... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.InvM_InvoiceListTest#clickInvoiceManagement</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">tests.InvM_InvoiceListTest#laphoadon1dongSuccess</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">tests.LoginTest#loginWithBlankField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.InvM_InvoiceListTest#clickInvoiceManagement</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.InvM_InvoiceListTest#laphoadonkhongchiuthue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">tests.InvM_InvoiceListTest#laphoadonnhieudongSuccess</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">tests.InvM_InvoiceListTest#laphoadonthue0</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">tests.InvM_InvoiceListTest#laphoadonthue10</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">tests.InvM_InvoiceListTest#laphoadonthue5</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">tests.LoginTest#loginWithBlankField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
