@@ -26,6 +26,7 @@ public class ReadThongtinhanghoaHD {
 	public static final String COLUMN_INDEX_Donvitinh = "Donvitinh";
 	public static final String COLUMN_INDEX_Soluong = "Soluong";
 	public static final String COLUMN_INDEX_Dongia = "Dongia";
+	public static final String COLUMN_INDEX_Xoa = "Xoa";
 
 	public static List<HangHoa> readExcel(String excelFilePath, int sheetIndex) throws IOException {
 		List<HangHoa> dshanghoa = new ArrayList<>();
@@ -86,6 +87,10 @@ public class ReadThongtinhanghoaHD {
 					hanghoa.setDongia(getCellValue(cell).toString());
 					break;
 
+				case COLUMN_INDEX_Xoa:
+					hanghoa.setXoa((String) getCellValue(cell));
+					break;
+					
 				default:
 					break;
 				}

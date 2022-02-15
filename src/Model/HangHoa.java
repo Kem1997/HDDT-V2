@@ -7,6 +7,7 @@ public class HangHoa {
 	private String Donvitinh;
 	private String Soluong;
 	private String Dongia;
+	private String Xoa;
 
 	public String getStt() {
 		return Stt;
@@ -56,11 +57,20 @@ public class HangHoa {
 		Dongia = dongia;
 	}
 
+	public String getXoa() {
+		return Xoa;
+	}
+
+	public void setXoa(String xoa) {
+		Xoa = xoa;
+	}
+	
 	public HangHoa() {
 		setStt("");
 		setHinhthuc("");
 		setTenhanghoa("");
 		setDongia("");
 		setSoluong("");
+		setXoa("");
 	}
 }

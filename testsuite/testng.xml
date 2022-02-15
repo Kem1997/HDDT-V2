@@ -127,13 +127,19 @@
 <!-- 					<include name="laphoadonFail1" /> -->
 <!-- 					<include name="laphoadonFail2" /> -->
 <!-- 					<include name="laphoadonFail3" /> -->
+<!-- 					<include name="laphoadonFail4" /> -->
+<!--                 	<include name="laphoadonFail5" /> -->
 <!-- 					<include name="laphoadon1dongSuccess" /> -->
-					<include name="laphoadonnhieudongSuccess" />
-					<include name="laphoadonkhongchiuthue" />
-					<include name="laphoadonthue0" />
-					<include name="laphoadonthue5" />
-					<include name="laphoadonthue10" />
-
+<!-- 					<include name="laphoadonnhieudongSuccess" /> -->
+<!-- 					<include name="laphoadonkhongchiuthue" /> -->
+<!-- 					<include name="laphoadonthue0" /> -->
+<!-- 					<include name="laphoadonthue5" /> -->
+<!-- 					<include name="laphoadonthue10" /> -->
+<!-- 					<include name="laphoadoncokhuyenmai" /> -->
+<!-- 					<include name="laphoadoncochietkhau" /> -->
+<!-- 					<include name="laphoadoncoghichu" /> -->
+					<include name="laphdcotatcahinhthuc" />
+					<include name="suahoadon" />
 				</methods>
 			</class>
 		</classes>
