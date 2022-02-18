@@ -88,7 +88,7 @@ public class ReadThongtinhanghoaHD {
 					break;
 
 				case COLUMN_INDEX_Xoa:
-					hanghoa.setXoa((String) getCellValue(cell));
+					hanghoa.setXoa( (Boolean) getCellValue(cell));
 					break;
 					
 				default:

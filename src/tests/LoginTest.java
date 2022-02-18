@@ -34,9 +34,10 @@ public class LoginTest extends BaseTest{
 		//WebDriverWait wait = new WebDriverWait(getDriver(), 30); // Đợi tối đa 30s
 		//wait.until(ExpectedConditions.urlContains(Links.URL_DASHBOARD)); // Đợi đến khi url trên web =
 																			// Links.URL_DASHBOARD
-		
+	
 		Awaitility aw = new Awaitility();
-		aw.await().atMost(10, TimeUnit.SECONDS).ignoreExceptions().until(()->getDriver().getCurrentUrl().contains(Links.URL_DASHBOARD));
+	
+		aw.await().atMost(10, TimeUnit.SECONDS).ignoreExceptions().until(()->getDriver().getCurrentUrl().toString().equals(Links.URL_DASHBOARD));
 		
 		Assert.assertTrue(dashboardPg.isDisplayed(driver));
 	}

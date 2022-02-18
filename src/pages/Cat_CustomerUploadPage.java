@@ -1,5 +1,7 @@
 package pages;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -57,7 +59,12 @@ public class Cat_CustomerUploadPage extends BaseTest {
 	}
 
 	public void addTemplate() {
-		selectfile.sendKeys("E:\\Auto Test\\HDDT-V2\\data\\MauUploadKH.xlsx");
+		selectfile.click();
+//		driver.findElement(By.id("inputFile"));
+		driver.switchTo()
+        .activeElement()
+        .sendKeys("E:\\Auto Test\\HDDT-V2\\data\\MauUploadKH.xlsx");
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 //		String filePath = System.getProperty(("user.dir")+ filename);
 //		selectfile.click();
 //		selectfile.sendKeys(filePath);

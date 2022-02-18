@@ -71,6 +71,9 @@ public class InvM_InvoiceListPage extends BaseTest {
 
 	@FindBy(xpath = "//p[text()='Tiền chiết khấu không được vượt quá tiền hóa đơn.']")
 	public static WebElement messageError;
+	
+	@FindBy(xpath = "//button[text()='Xóa']")
+	public static WebElement delete;
 
 	public InvM_InvoiceListPage(WebDriver driver) {
 		this.driver = driver;
@@ -229,8 +232,14 @@ public class InvM_InvoiceListPage extends BaseTest {
 					// Xoa dong hang hoa va tinh lai tong tien
 					WebElement xoadonghanghoa = driver
 							.findElement(By.xpath("//td[text()='" + k + "']//parent::tr//td[1]"));
-					if (listhh.get(j).getXoa().equals("False")) {
+					if (listhh.get(j).getXoa().equals(false)) {
 						xoadonghanghoa.click();
+						try {
+							Thread.sleep(2000);
+						} catch (Exception e) {
+							// TODO: handle exception
+						}
+						delete.click();
 						try {
 							Thread.sleep(2000);
 						} catch (Exception e) {
@@ -337,7 +346,9 @@ public class InvM_InvoiceListPage extends BaseTest {
 		
 		// Clear tat ca cac dong hang hoa
 		List<WebElement> inputs = driver.findElements(By.xpath("//tbody//tr//input"));
-		inputs.clear();
+		for (WebElement input : inputs) {
+			input.clear();
+		}
 
 		for (int i = 0; i < listthongtinhd.size(); i++) {
 			if (listthongtinhd.get(i) != null) {
@@ -441,7 +452,7 @@ public class InvM_InvoiceListPage extends BaseTest {
 					// Kiem tra thanh tien dong
 					WebElement thanhtien = driver
 							.findElement(By.xpath("//td[text()='" + k + "']//parent::tr//td[8]//input"));
-					thanhtien.click();
+					tenhanghoa.click();
 					String thanhtientextcodauphay = thanhtien.getAttribute("value");
 					String thanhtientext = thanhtientextcodauphay.replace(",", "");
 					Float thanhtienso = Float.parseFloat(thanhtientext);
@@ -453,8 +464,14 @@ public class InvM_InvoiceListPage extends BaseTest {
 					// Xoa dong hang hoa va tinh lai tong tien
 					WebElement xoadonghanghoa = driver
 							.findElement(By.xpath("//td[text()='" + k + "']//parent::tr//td[1]"));
-					if (listhh.get(j).getXoa().equals("False")) {
+					if (listhh.get(j).getXoa().equals(false)) {
 						xoadonghanghoa.click();
+						try {
+							Thread.sleep(2000);
+						} catch (Exception e) {
+							// TODO: handle exception
+						}
+						delete.click();
 						try {
 							Thread.sleep(2000);
 						} catch (Exception e) {
