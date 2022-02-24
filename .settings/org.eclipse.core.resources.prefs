@@ -1,7 +1,7 @@
 eclipse.preferences.version=1
 encoding//src/pages/Cat_CustomerPage.java=UTF-8
-encoding//src/pages/DK_DangKyDaiSoPage.java=UTF-8
 encoding//src/pages/DK_DangKySuDungPage.java=UTF-8
+encoding//src/pages/DK_ThongBaoPHPage.java=UTF-8
 encoding//src/pages/InvM_InvoiceListPage.java=UTF-8
 encoding//src/pages/LoginPage.java=UTF-8
 encoding//src/pages/Sys_UnitInforPage.java=UTF-8
@@ -11,7 +11,7 @@ encoding//src/tests/BaseTest.java=UTF-8
 encoding//src/tests/Cat_CustomerTest.java=UTF-8
 encoding//src/tests/Cat_CustomerUploadTest.java=UTF-8
 encoding//src/tests/Cat_ProductManagementTest.java=UTF-8
-encoding//src/tests/DK_DangKyDaiSoTest.java=UTF-8
+encoding//src/tests/DK_ThongBaoPHTest.java=UTF-8
 encoding//src/tests/InvM_InvoiceListTest.java=UTF-8
 encoding//src/tests/LoginTest.java=UTF-8
 encoding//src/tests/Sys_UnitInforTest.java=UTF-8

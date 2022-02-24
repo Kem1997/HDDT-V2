@@ -12,16 +12,6 @@
           <include name="setUp"/>
         </methods>
       </class> <!-- tests.LoginTest -->
-      <class name="tests.Cat_CustomerUploadTest">
-        <methods>
-          <include name="createCustomerUploadSuccess"/>
-          <include name="notDeleteFileUpload"/>
-          <include name="deleteFileUploadSuccess"/>
-          <include name="createCustomerUploadFail2"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- tests.Cat_CustomerUploadTest -->
     </classes>
   </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Suite] -->

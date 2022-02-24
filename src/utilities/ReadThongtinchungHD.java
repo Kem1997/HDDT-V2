@@ -21,6 +21,7 @@ import Model.ThongTinHD;
 
 public class ReadThongtinchungHD {
 	public static final String COLUMN_INDEX_Stt = "Stt";
+	public static final String COLUMN_INDEX_Serial = "Serial";
 	public static final String COLUMN_INDEX_Makhachhang = "Makhachhang";
 	public static final String COLUMN_INDEX_Hotennguoimua = "Hotennguoimua";
 	public static final String COLUMN_INDEX_Donvimua = "Donvimua";
@@ -73,6 +74,9 @@ public class ReadThongtinchungHD {
 				switch (columnName) {
 				case COLUMN_INDEX_Stt:
 					thongtinhd.setStt(getCellValue(cell).toString());
+					break;
+				case COLUMN_INDEX_Serial:
+					thongtinhd.setSerial((String) getCellValue(cell));
 					break;
 				case COLUMN_INDEX_Makhachhang:
 					thongtinhd.setMakhachhang((String) getCellValue(cell));

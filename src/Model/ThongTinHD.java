@@ -4,6 +4,7 @@ import java.util.List;
 
 public class ThongTinHD {
 		private String Stt;
+		private String Serial;
 		private String Makhachhang;
 		private String Hotennguoimua;
 		private String Donvimua;
@@ -21,6 +22,14 @@ public class ThongTinHD {
 
 		public void setStt(String stt) {
 			Stt = stt;
+		}
+		
+		public String getSerial() {
+			return Serial;
+		}
+
+		public void setSerial(String serial) {
+			Serial = serial;
 		}
 
 		public String getMakhachhang() {

@@ -27,7 +27,7 @@ public class LoginPage {
 
 	public void login(String userName, String password) {
 		Select dropdown = new Select(user_taxcode);
-		dropdown.selectByVisibleText("CÔNG TY TNHH TOTO VIỆT NAM");
+		dropdown.selectByVisibleText("VIETTEL - KIỂM THỬ HÓA ĐƠN CÓ MÃ");
 		
 		user_login.sendKeys(userName);
 		user_pass.sendKeys(password);
@@ -44,7 +44,7 @@ public class LoginPage {
 
 	public DashboardPage loginsccess(WebDriver driver) {
 		Select dropdown = new Select(user_taxcode);
-		dropdown.selectByVisibleText("CÔNG TY TNHH TOTO VIỆT NAM");
+		dropdown.selectByVisibleText("VIETTEL - KIỂM THỬ HÓA ĐƠN CÓ MÃ");
 		
 		user_login.sendKeys("admin");
 		user_pass.sendKeys("Abcd@123456a");

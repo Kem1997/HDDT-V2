@@ -1,17 +1,21 @@
 package pages;
 
+import java.awt.event.KeyEvent;
+
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import tests.BaseTest;
 
-public class DK_DangKyDaiSoPage extends BaseTest {
+public class DK_ThongBaoPHPage extends BaseTest {
 
-	@FindBy(xpath = "//a[contains(text(), 'Đăng ký dải số')]")
-	static WebElement dangkydaiso;
+	@FindBy(xpath = "//a[contains(text(), 'Thông báo phát hành')]")
+	static WebElement thongbaophathanh;
 
 	@FindBy(xpath = "//a[@href='/TaxPublish/Create/']")
 	static WebElement addannouncement;
@@ -85,13 +89,13 @@ public class DK_DangKyDaiSoPage extends BaseTest {
 	@FindBy(xpath = "//tr[1]//td[5]")
 	static WebElement status;
 
-	public DK_DangKyDaiSoPage(WebDriver driver) {
+	public DK_ThongBaoPHPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
-	public void clickDangKyDaiSo() {
-		dangkydaiso.click();
+	public void clickThongBaoPH() {
+		thongbaophathanh.click();
 	}
 
 	public void clickAddAnnouncement() {
@@ -158,10 +162,16 @@ public class DK_DangKyDaiSoPage extends BaseTest {
 
 	public void deleteInvoiceType() {
 		deleteinvoicetype.click();
+		try {
+			Thread.sleep(2000);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		deleteinvoicetype.sendKeys(Keys.ENTER);
 	}
 
 	public void addAnnounncement() {
-		addInvoiceType("AA", "22", "2000", "24/01/2022");
+		addInvoiceType("AA", "22", "2000", "24/02/2022");
 
 		savenotifications.click();
 		try {
@@ -173,7 +183,7 @@ public class DK_DangKyDaiSoPage extends BaseTest {
 
 	public void editAnnouncement() {
 		editannouncement.click();
-		addInvoiceType("BB", "22", "2000", "24/01/2022");
+		addInvoiceType("BB", "22", "2000", "24/02/2022");
 
 		savenotifications.click();
 		try {

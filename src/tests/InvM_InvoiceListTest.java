@@ -176,7 +176,19 @@ public class InvM_InvoiceListTest extends BaseTest{
 		InvM_InvoiceListPage invlistPg;
 		invlistPg = new InvM_InvoiceListPage(getDriver());
 		invlistPg.clickInvoiceList();
+		invlistPg.selectInvoice();
 		invlistPg.clickSuaHoaDon();
 		invlistPg.suaHoaDon("case1");
+		Assert.assertEquals(invlistPg.title.getText(), "Cập nhật hóa đơn thành công.");
+	}
+	
+	@Test
+	public void xoahoadon() {
+		InvM_InvoiceListPage invlistPg;
+		invlistPg = new InvM_InvoiceListPage(getDriver());
+		invlistPg.clickInvoiceList();
+		invlistPg.selectInvoice();
+		invlistPg.deleteInvoice();
+		Assert.assertEquals(invlistPg.title.getText(), "Xóa hóa đơn thành công.");
 	}
 }

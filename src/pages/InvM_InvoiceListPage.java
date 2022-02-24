@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 import Model.HangHoa;
 import Model.ThongTinHD;
@@ -26,6 +27,9 @@ public class InvM_InvoiceListPage extends BaseTest {
 
 	@FindBy(xpath = "//a[@id='crtInvoice']")
 	static WebElement create;
+	
+	@FindBy(xpath = "//select[@id='Serial']")
+	static WebElement serial;
 
 	@FindBy(xpath = "//input[@id='CusCode']")
 	static WebElement cuscode;
@@ -73,7 +77,19 @@ public class InvM_InvoiceListPage extends BaseTest {
 	public static WebElement messageError;
 	
 	@FindBy(xpath = "//button[text()='Xóa']")
-	public static WebElement delete;
+	static WebElement delete;
+	
+	@FindBy(xpath = "//button[text()='Xóa']")
+	static WebElement selectSerrial;
+	
+	@FindBy(xpath = "//button[contains(text(), 'Tìm kiếm')]")
+	static WebElement timkiem;
+	
+	@FindBy(xpath = "//button[@id='alertify-ok']")
+	static WebElement ok;
+	
+	@FindBy(xpath = "//button[contains(text(),'Phát hành hóa đơn')]")
+	static WebElement phathanhhd;
 
 	public InvM_InvoiceListPage(WebDriver driver) {
 		this.driver = driver;
@@ -121,6 +137,9 @@ public class InvM_InvoiceListPage extends BaseTest {
 		listthongtinhd = getThongTinHD(casetest);
 		for (int i = 0; i < listthongtinhd.size(); i++) {
 			if (listthongtinhd.get(i) != null) {
+				Select seri = new Select(serial);
+				seri.selectByVisibleText(listthongtinhd.get(i).getSerial());
+				
 				cuscode.clear();
 				cuscode.sendKeys(listthongtinhd.get(i).getMakhachhang());
 				byername.clear();
@@ -306,6 +325,12 @@ public class InvM_InvoiceListPage extends BaseTest {
 		}
 	}
 
+	public void selectInvoice() {
+		Select seri = new Select(serial);
+		seri.selectByVisibleText("1C22TKA");
+		timkiem.click();
+	}
+	
 	public void clickSuaHoaDon() {
 		WebElement sua_ds = driver.findElement(By.xpath("//td[contains(text(),'3')]//parent::tr//td[8]//a"));
 		sua_ds.click();
@@ -352,6 +377,9 @@ public class InvM_InvoiceListPage extends BaseTest {
 
 		for (int i = 0; i < listthongtinhd.size(); i++) {
 			if (listthongtinhd.get(i) != null) {
+				Select seri = new Select(serial);
+				seri.selectByVisibleText(listthongtinhd.get(i).getSerial());
+				
 				cuscode.clear();
 				cuscode.sendKeys(listthongtinhd.get(i).getMakhachhang());
 				byername.clear();
@@ -536,5 +564,34 @@ public class InvM_InvoiceListPage extends BaseTest {
 				// TODO: handle exception
 			}
 		}
+	}
+	
+	public void deleteInvoice() {
+		WebElement xoa_ds = driver.findElement(By.xpath("//td[contains(text(),'2')]//parent::tr//td[9]//a"));
+		xoa_ds.click();
+		try {
+			Thread.sleep(2000);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		ok.click();
+	}
+	
+	public void phathanh1hd() {
+		selectInvoice();
+		WebElement chon1hd = driver.findElement(By.xpath("//td[contains(text(),'2')]//parent::tr//td[9]//a"));
+		chon1hd.click();
+		phathanhhd.click();
+	}
+	
+	public void phathanhnhieuhd() {
+		clickInvManagement();
+		clickInvoiceList();
+		selectInvoice();
+		
+	}
+	
+	public void phathanhtatcahd() {
+		
 	}
 }
