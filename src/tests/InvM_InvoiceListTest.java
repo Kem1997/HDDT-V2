@@ -191,4 +191,10 @@ public class InvM_InvoiceListTest extends BaseTest{
 		invlistPg.deleteInvoice();
 		Assert.assertEquals(invlistPg.title.getText(), "Xóa hóa đơn thành công.");
 	}
+	
+	@Test
+	public void phathanh1hoadon() {
+		InvM_InvoiceListPage invlistPg;
+		invlistPg = new InvM_InvoiceListPage(getDriver());
+	}
 }
