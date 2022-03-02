@@ -89,7 +89,16 @@ public class InvM_InvoiceListPage extends BaseTest {
 	static WebElement ok;
 	
 	@FindBy(xpath = "//button[contains(text(),'Phát hành hóa đơn')]")
-	static WebElement phathanhhd;
+	public static WebElement phathanhhd;
+	
+	@FindBy(xpath = "//p[contains(text(), 'Cần chọn hóa đơn để phát hành.')]")
+	public static WebElement messagephathanh;
+	
+	@FindBy(xpath = "//button[contains(text(), 'OK')]")
+	public static WebElement okphathanhloi;
+	
+	@FindBy(xpath = "//button[contains(text(), 'OK')]")
+	public static WebElement phathanhthanhcong;
 
 	public InvM_InvoiceListPage(WebDriver driver) {
 		this.driver = driver;
@@ -163,7 +172,7 @@ public class InvM_InvoiceListPage extends BaseTest {
 				// Chon thue GTGT
 				List<WebElement> optionsToSelectVat = driver.findElements(By.xpath("//select[@id='VATRate']//option"));
 				for (WebElement option : optionsToSelectVat) {
-					if (option.getText().contains(listthongtinhd.get(i).getThueGTGT())) {
+					if (option.getText().equals(listthongtinhd.get(i).getThueGTGT())) {
 						option.click();
 						break;
 					}
@@ -292,8 +301,23 @@ public class InvM_InvoiceListPage extends BaseTest {
 				vatamount = 0;
 				amount = total;
 			}
+			
+			if (listthongtinhd.get(i).getThueGTGT().equals("3.5%")) {
+				vatamount = (total * 7/2) / 100;
+				amount = total + vatamount;
+			}
 			if (listthongtinhd.get(i).getThueGTGT().equals("5%")) {
 				vatamount = (total * 5) / 100;
+				amount = total + vatamount;
+			}
+			
+			if (listthongtinhd.get(i).getThueGTGT().equals("7%")) {
+				vatamount = (total * 7) / 100;
+				amount = total + vatamount;
+			}
+			
+			if (listthongtinhd.get(i).getThueGTGT().equals("8%")) {
+				vatamount = (total * 8) / 100;
 				amount = total + vatamount;
 			}
 
@@ -301,19 +325,25 @@ public class InvM_InvoiceListPage extends BaseTest {
 				vatamount = (total * 10) / 100;
 				amount = total + vatamount;
 			}
-			if (listthongtinhd.get(i).getThueGTGT().equals("Không thuế GTGT")) {
+			
+			if (listthongtinhd.get(i).getThueGTGT().equals("Không chịu thuế")) {
+				vatamount = 0;
+				amount = total;
+			}
+			
+			if (listthongtinhd.get(i).getThueGTGT().equals("Không kê khai thuế")) {
 				vatamount = 0;
 				amount = total;
 			}
 
 			// So sanh Tien thue GTGT
 			if (Float.parseFloat(tienthuegtgt.getAttribute("value").replace(",", "")) != vatamount) {
-				throw new Exception("SAI TIEN THUE GTGT O HOA DON" + i);
+				throw new Exception("SAI TIEN THUE GTGT O HOA DON " + i);
 			}
 
 			// So sanh Tong cong tien thanh toan
 			if (Float.parseFloat(tongcongtientt.getAttribute("value").replace(",", "")) != amount) {
-				throw new Exception("SAI TONG CONG TIEN THANH TOAN O HOA DON" + i);
+				throw new Exception("SAI TONG CONG TIEN THANH TOAN O HOA DON " + i);
 			}
 
 			save.click();
@@ -403,7 +433,7 @@ public class InvM_InvoiceListPage extends BaseTest {
 				// Chon thue GTGT
 				List<WebElement> optionsToSelectVat = driver.findElements(By.xpath("//select[@id='VATRate']//option"));
 				for (WebElement option : optionsToSelectVat) {
-					if (option.getText().contains(listthongtinhd.get(i).getThueGTGT())) {
+					if (option.getText().equals(listthongtinhd.get(i).getThueGTGT())) {
 						option.click();
 						break;
 					}
@@ -525,7 +555,7 @@ public class InvM_InvoiceListPage extends BaseTest {
 
 			// So sanh tong tien dich vu
 			if (Float.parseFloat(tongtiendichvu.getAttribute("value").replace(",", "")) != total) {
-				throw new Exception("SAI TONG TIEN DICH VU O HOA DON" + i);
+				throw new Exception("SAI TONG TIEN DICH VU O HOA DON " + i);
 			}
 
 			// Tinh Tien thue GTGT va Tong cong tien thanh toan theo tung loai thue suat
@@ -533,8 +563,24 @@ public class InvM_InvoiceListPage extends BaseTest {
 				vatamount = 0;
 				amount = total;
 			}
+			
+			if (listthongtinhd.get(i).getThueGTGT().equals("3.5%")) {
+				vatamount = (total * 7/2) / 100;
+				amount = total + vatamount;
+			}
+			
 			if (listthongtinhd.get(i).getThueGTGT().equals("5%")) {
 				vatamount = (total * 5) / 100;
+				amount = total + vatamount;
+			}
+			
+			if (listthongtinhd.get(i).getThueGTGT().equals("7%")) {
+				vatamount = (total * 7) / 100;
+				amount = total + vatamount;
+			}
+			
+			if (listthongtinhd.get(i).getThueGTGT().equals("8%")) {
+				vatamount = (total * 8) / 100;
 				amount = total + vatamount;
 			}
 
@@ -542,19 +588,25 @@ public class InvM_InvoiceListPage extends BaseTest {
 				vatamount = (total * 10) / 100;
 				amount = total + vatamount;
 			}
-			if (listthongtinhd.get(i).getThueGTGT().equals("Không thuế GTGT")) {
+			
+			if (listthongtinhd.get(i).getThueGTGT().equals("Không chịu thuế")) {
+				vatamount = 0;
+				amount = total;
+			}
+			
+			if (listthongtinhd.get(i).getThueGTGT().equals("Không kê khai thuế")) {
 				vatamount = 0;
 				amount = total;
 			}
 
 			// So sanh Tien thue GTGT
 			if (Float.parseFloat(tienthuegtgt.getAttribute("value").replace(",", "")) != vatamount) {
-				throw new Exception("SAI TIEN THUE GTGT O HOA DON" + i);
+				throw new Exception("SAI TIEN THUE GTGT O HOA DON " + i);
 			}
 
 			// So sanh Tong cong tien thanh toan
 			if (Float.parseFloat(tongcongtientt.getAttribute("value").replace(",", "")) != amount) {
-				throw new Exception("SAI TONG CONG TIEN THANH TOAN O HOA DON" + i);
+				throw new Exception("SAI TONG CONG TIEN THANH TOAN O HOA DON " + i);
 			}
 
 			save.click();
@@ -578,20 +630,28 @@ public class InvM_InvoiceListPage extends BaseTest {
 	}
 	
 	public void phathanh1hd() {
-		selectInvoice();
-		WebElement chon1hd = driver.findElement(By.xpath("//td[contains(text(),'2')]//parent::tr//td[9]//a"));
+		// Chi chon 1 hoa don. Vd hoa don thu 2
+		WebElement chon1hd = driver.findElement(By.xpath("//td[contains(text(),'2')]//parent::tr//td[10]//input"));
 		chon1hd.click();
 		phathanhhd.click();
 	}
 	
 	public void phathanhnhieuhd() {
-		clickInvManagement();
-		clickInvoiceList();
-		selectInvoice();
-		
+		// Phat hanh khoang 3-5 hoa don
+		WebElement chonhd1 = driver.findElement(By.xpath("//td[contains(text(),'1')]//parent::tr//td[10]//input"));
+		chonhd1.click();
+		WebElement chonhd2 = driver.findElement(By.xpath("//td[contains(text(),'2')]//parent::tr//td[10]//input"));
+		chonhd2.click();
+		WebElement chonhd3 = driver.findElement(By.xpath("//td[contains(text(),'3')]//parent::tr//td[10]//input"));
+		chonhd3.click();
+		phathanhhd.click();
 	}
 	
 	public void phathanhtatcahd() {
-		
+		// Phat hanh tat ca hoa don cua 1 trang
+		selectInvoice();
+		WebElement chontatca = driver.findElement(By.xpath("//input[@id='ckbAll']"));
+		chontatca.click();
+		phathanhhd.click();
 	}
 }

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="17" total="22" passed="4" failed="1" skipped="0">
+<testng-results ignored="22" total="28" passed="5" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-02-24T11:47:44 ICT" name="Suite" finished-at="2022-02-24T11:48:50 ICT" duration-ms="66152">
+  <suite started-at="2022-03-01T16:57:10 ICT" name="Suite" finished-at="2022-03-01T16:58:17 ICT" duration-ms="67916">
     <groups>
     </groups>
-    <test started-at="2022-02-24T11:47:44 ICT" name="Test1" finished-at="2022-02-24T11:48:50 ICT" duration-ms="66152">
+    <test started-at="2022-03-01T16:57:10 ICT" name="Test1" finished-at="2022-03-01T16:58:17 ICT" duration-ms="67916">
       <class name="tests.LoginTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@3e11f9e9]" started-at="2022-02-24T11:47:44 ICT" name="setUp" finished-at="2022-02-24T11:47:47 ICT" duration-ms="3330" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@2c1b194a]" started-at="2022-03-01T16:57:10 ICT" name="setUp" finished-at="2022-03-01T16:57:13 ICT" duration-ms="3596" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginWithBlankField()[pri:0, instance:tests.LoginTest@3e11f9e9]" started-at="2022-02-24T11:47:48 ICT" name="loginWithBlankField" finished-at="2022-02-24T11:47:48 ICT" duration-ms="789" status="PASS">
+        <test-method signature="loginWithBlankField()[pri:0, instance:tests.LoginTest@2c1b194a]" started-at="2022-03-01T16:57:13 ICT" name="loginWithBlankField" finished-at="2022-03-01T16:57:14 ICT" duration-ms="929" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithBlankField -->
-        <test-method signature="loginByAdmin()[pri:0, instance:tests.LoginTest@3e11f9e9]" started-at="2022-02-24T11:47:48 ICT" name="loginByAdmin" finished-at="2022-02-24T11:48:00 ICT" duration-ms="11231" status="FAIL">
+        <test-method signature="loginByAdmin()[pri:0, instance:tests.LoginTest@2c1b194a]" started-at="2022-03-01T16:57:14 ICT" name="loginByAdmin" finished-at="2022-03-01T16:57:25 ICT" duration-ms="11144" status="FAIL">
           <exception class="org.awaitility.core.ConditionTimeoutException">
             <message>
               <![CDATA[Condition with tests.LoginTest was not fulfilled within 10 seconds.]]>
@@ -70,24 +70,28 @@ at org.awaitility.core.ConditionAwaiter$ConditionPoller.call(ConditionAwaiter.ja
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginByAdmin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@3e11f9e9]" started-at="2022-02-24T11:48:49 ICT" name="tearDown" finished-at="2022-02-24T11:48:50 ICT" duration-ms="921" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@2c1b194a]" started-at="2022-03-01T16:58:17 ICT" name="tearDown" finished-at="2022-03-01T16:58:17 ICT" duration-ms="749" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.LoginTest -->
       <class name="tests.InvM_InvoiceListTest">
-        <test-method signature="clickInvoiceManagement()[pri:0, instance:tests.InvM_InvoiceListTest@36916eb0]" started-at="2022-02-24T11:48:00 ICT" name="clickInvoiceManagement" finished-at="2022-02-24T11:48:00 ICT" duration-ms="87" status="PASS">
+        <test-method signature="clickInvoiceManagement()[pri:0, instance:tests.InvM_InvoiceListTest@12aba8be]" started-at="2022-03-01T16:57:25 ICT" name="clickInvoiceManagement" finished-at="2022-03-01T16:57:25 ICT" duration-ms="101" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickInvoiceManagement -->
-        <test-method signature="suahoadon()[pri:0, instance:tests.InvM_InvoiceListTest@36916eb0]" started-at="2022-02-24T11:48:00 ICT" name="suahoadon" finished-at="2022-02-24T11:48:46 ICT" duration-ms="45912" status="PASS">
+        <test-method signature="suahoadon()[pri:0, instance:tests.InvM_InvoiceListTest@12aba8be]" started-at="2022-03-01T16:57:25 ICT" name="suahoadon" finished-at="2022-03-01T16:58:11 ICT" duration-ms="45193" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suahoadon -->
-        <test-method signature="xoahoadon()[pri:0, instance:tests.InvM_InvoiceListTest@36916eb0]" started-at="2022-02-24T11:48:46 ICT" name="xoahoadon" finished-at="2022-02-24T11:48:49 ICT" duration-ms="3819" status="PASS">
+        <test-method signature="xoahoadon()[pri:0, instance:tests.InvM_InvoiceListTest@12aba8be]" started-at="2022-03-01T16:58:11 ICT" name="xoahoadon" finished-at="2022-03-01T16:58:15 ICT" duration-ms="4803" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- xoahoadon -->
+        <test-method signature="phathanhkhongchonhoadon()[pri:0, instance:tests.InvM_InvoiceListTest@12aba8be]" started-at="2022-03-01T16:58:15 ICT" name="phathanhkhongchonhoadon" finished-at="2022-03-01T16:58:17 ICT" duration-ms="1327" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- phathanhkhongchonhoadon -->
       </class> <!-- tests.InvM_InvoiceListTest -->
     </test> <!-- Test1 -->
   </suite> <!-- Suite -->

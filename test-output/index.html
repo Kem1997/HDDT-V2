@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
+                    <span class="method-stats">6 methods, 1 failed,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -124,6 +124,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="loginWithBlankField">loginWithBlankField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.InvM_InvoiceListTest" class="method navigator-link" hash-for-method="phathanhkhongchonhoadon">phathanhkhongchonhoadon</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -213,6 +218,13 @@ Caused by: java.lang.NullPointerException: Cannot invoke &quot;org.openqa.seleni
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="phathanhkhongchonhoadon">
+                  </a> <!-- phathanhkhongchonhoadon -->
+                  <span class="method-name">phathanhkhongchonhoadon</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="suahoadon">
                   </a> <!-- suahoadon -->
                   <span class="method-name">suahoadon</span>
@@ -252,6 +264,7 @@ Caused by: java.lang.NullPointerException: Cannot invoke &quot;org.openqa.seleni
           &lt;include name=&quot;clickInvoiceManagement&quot;/&gt;
           &lt;include name=&quot;suahoadon&quot;/&gt;
           &lt;include name=&quot;xoahoadon&quot;/&gt;
+          &lt;include name=&quot;phathanhkhongchonhoadon&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- tests.InvM_InvoiceListTest --&gt;
     &lt;/classes&gt;
@@ -293,27 +306,31 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'suahoadon')
 data.setCell(0, 2, 'tests.InvM_InvoiceListTest')
-data.setCell(0, 3, 45912);
+data.setCell(0, 3, 45193);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'loginByAdmin')
 data.setCell(1, 2, 'tests.LoginTest')
-data.setCell(1, 3, 11231);
+data.setCell(1, 3, 11144);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'xoahoadon')
 data.setCell(2, 2, 'tests.InvM_InvoiceListTest')
-data.setCell(2, 3, 3819);
+data.setCell(2, 3, 4803);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'loginWithBlankField')
-data.setCell(3, 2, 'tests.LoginTest')
-data.setCell(3, 3, 789);
+data.setCell(3, 1, 'phathanhkhongchonhoadon')
+data.setCell(3, 2, 'tests.InvM_InvoiceListTest')
+data.setCell(3, 3, 1327);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'clickInvoiceManagement')
-data.setCell(4, 2, 'tests.InvM_InvoiceListTest')
-data.setCell(4, 3, 87);
+data.setCell(4, 1, 'loginWithBlankField')
+data.setCell(4, 2, 'tests.LoginTest')
+data.setCell(4, 3, 929);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'clickInvoiceManagement')
+data.setCell(5, 2, 'tests.InvM_InvoiceListTest')
+data.setCell(5, 3, 101);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -333,7 +350,7 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">17 ignored methods</span>
+            <span class="header-content">22 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
@@ -343,9 +360,15 @@ return data;
                 <br/>
                 <span class="ignored-method-name">laphoadonthue0</span>
                 <br/>
+                <span class="ignored-method-name">phathanhchon1hd</span>
+                <br/>
                 <span class="ignored-method-name">laphoadonthue5</span>
                 <br/>
+                <span class="ignored-method-name">laphoadonthue3</span>
+                <br/>
                 <span class="ignored-method-name">laphoadon1dongSuccess</span>
+                <br/>
+                <span class="ignored-method-name">laphoadonthue7</span>
                 <br/>
                 <span class="ignored-method-name">setUp</span>
                 <br/>
@@ -367,7 +390,11 @@ return data;
                 <br/>
                 <span class="ignored-method-name">laphoadonnhieudongSuccess</span>
                 <br/>
+                <span class="ignored-method-name">laphoadonkhongkekhaithue</span>
+                <br/>
                 <span class="ignored-method-name">laphoadoncochietkhau</span>
+                <br/>
+                <span class="ignored-method-name">laphoadonthue8</span>
                 <br/>
                 <span class="ignored-method-name">tearDown</span>
                 <br/>
@@ -390,35 +417,39 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">loginWithBlankField</span>
-                <span class="method-start">3363 ms</span>
+                <span class="method-start">3632 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">loginByAdmin</span>
-                <span class="method-start">4157 ms</span>
+                <span class="method-start">4565 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.InvM_InvoiceListTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">clickInvoiceManagement</span>
-                <span class="method-start">15395 ms</span>
+                <span class="method-start">15723 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">suahoadon</span>
-                <span class="method-start">15484 ms</span>
+                <span class="method-start">15826 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">xoahoadon</span>
-                <span class="method-start">61398 ms</span>
+                <span class="method-start">61021 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">phathanhkhongchonhoadon</span>
+                <span class="method-start">65826 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">65220 ms</span>
+                <span class="method-start">67159 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

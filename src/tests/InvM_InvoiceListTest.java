@@ -95,13 +95,35 @@ public class InvM_InvoiceListTest extends BaseTest{
 	}
 	
 	@Test
+	public void laphoadonkhongkekhaithue() throws Exception {
+		// TH thue suat: Khong ke khai thue
+		InvM_InvoiceListPage invlistPg;
+		invlistPg = new InvM_InvoiceListPage(getDriver());
+		invlistPg.clickInvoiceList();
+		invlistPg.clickCreateInvoice();
+		invlistPg.lapHoaDon("case9");
+		Assert.assertEquals(invlistPg.title.getText(), "Tạo mới hóa đơn thành công.");
+	}
+	
+	@Test
 	public void laphoadonthue0() throws Exception {
 		// TH thue suat: 0%
 		InvM_InvoiceListPage invlistPg;
 		invlistPg = new InvM_InvoiceListPage(getDriver());
 		invlistPg.clickInvoiceList();
 		invlistPg.clickCreateInvoice();
-		invlistPg.lapHoaDon("case9");
+		invlistPg.lapHoaDon("case10");
+		Assert.assertEquals(invlistPg.title.getText(), "Tạo mới hóa đơn thành công.");
+	}
+	
+	@Test
+	public void laphoadonthue3() throws Exception {
+		// TH thue suat: 3.5%
+		InvM_InvoiceListPage invlistPg;
+		invlistPg = new InvM_InvoiceListPage(getDriver());
+		invlistPg.clickInvoiceList();
+		invlistPg.clickCreateInvoice();
+		invlistPg.lapHoaDon("case11");
 		Assert.assertEquals(invlistPg.title.getText(), "Tạo mới hóa đơn thành công.");
 	}
 	
@@ -112,7 +134,29 @@ public class InvM_InvoiceListTest extends BaseTest{
 		invlistPg = new InvM_InvoiceListPage(getDriver());
 		invlistPg.clickInvoiceList();
 		invlistPg.clickCreateInvoice();
-		invlistPg.lapHoaDon("case10");
+		invlistPg.lapHoaDon("case12");
+		Assert.assertEquals(invlistPg.title.getText(), "Tạo mới hóa đơn thành công.");
+	}
+	
+	@Test
+	public void laphoadonthue7() throws Exception {
+		// TH thue suat: 7%
+		InvM_InvoiceListPage invlistPg;
+		invlistPg = new InvM_InvoiceListPage(getDriver());
+		invlistPg.clickInvoiceList();
+		invlistPg.clickCreateInvoice();
+		invlistPg.lapHoaDon("case13");
+		Assert.assertEquals(invlistPg.title.getText(), "Tạo mới hóa đơn thành công.");
+	}
+	
+	@Test
+	public void laphoadonthue8() throws Exception {
+		// TH thue suat: 8%
+		InvM_InvoiceListPage invlistPg;
+		invlistPg = new InvM_InvoiceListPage(getDriver());
+		invlistPg.clickInvoiceList();
+		invlistPg.clickCreateInvoice();
+		invlistPg.lapHoaDon("case14");
 		Assert.assertEquals(invlistPg.title.getText(), "Tạo mới hóa đơn thành công.");
 	}
 	
@@ -123,7 +167,7 @@ public class InvM_InvoiceListTest extends BaseTest{
 		invlistPg = new InvM_InvoiceListPage(getDriver());
 		invlistPg.clickInvoiceList();
 		invlistPg.clickCreateInvoice();
-		invlistPg.lapHoaDon("case11");
+		invlistPg.lapHoaDon("case15");
 		Assert.assertEquals(invlistPg.title.getText(), "Tạo mới hóa đơn thành công.");
 	}
 	
@@ -134,7 +178,7 @@ public class InvM_InvoiceListTest extends BaseTest{
 		invlistPg = new InvM_InvoiceListPage(getDriver());
 		invlistPg.clickInvoiceList();
 		invlistPg.clickCreateInvoice();
-		invlistPg.lapHoaDon("case12");
+		invlistPg.lapHoaDon("case16");
 		Assert.assertEquals(invlistPg.title.getText(), "Tạo mới hóa đơn thành công.");
 	}
 	
@@ -145,7 +189,7 @@ public class InvM_InvoiceListTest extends BaseTest{
 		invlistPg = new InvM_InvoiceListPage(getDriver());
 		invlistPg.clickInvoiceList();
 		invlistPg.clickCreateInvoice();
-		invlistPg.lapHoaDon("case13");
+		invlistPg.lapHoaDon("case17");
 		Assert.assertEquals(invlistPg.title.getText(), "Tạo mới hóa đơn thành công.");
 	}
 	
@@ -156,7 +200,7 @@ public class InvM_InvoiceListTest extends BaseTest{
 		invlistPg = new InvM_InvoiceListPage(getDriver());
 		invlistPg.clickInvoiceList();
 		invlistPg.clickCreateInvoice();
-		invlistPg.lapHoaDon("case14");
+		invlistPg.lapHoaDon("case18");
 		Assert.assertEquals(invlistPg.title.getText(), "Tạo mới hóa đơn thành công.");
 	}
 	
@@ -167,7 +211,7 @@ public class InvM_InvoiceListTest extends BaseTest{
 		invlistPg = new InvM_InvoiceListPage(getDriver());
 		invlistPg.clickInvoiceList();
 		invlistPg.clickCreateInvoice();
-		invlistPg.lapHoaDon("case15");
+		invlistPg.lapHoaDon("case19");
 		Assert.assertEquals(invlistPg.title.getText(), "Tạo mới hóa đơn thành công.");
 	}
 	
@@ -193,8 +237,33 @@ public class InvM_InvoiceListTest extends BaseTest{
 	}
 	
 	@Test
-	public void phathanh1hoadon() {
+	public void phathanhkhongchonhoadon() {
+		// TH loi do khong chon hoa don phat hanh
 		InvM_InvoiceListPage invlistPg;
 		invlistPg = new InvM_InvoiceListPage(getDriver());
+		invlistPg.clickInvoiceList();
+		invlistPg.selectInvoice();
+		invlistPg.phathanhhd.click();
+		Assert.assertEquals(invlistPg.messagephathanh.getText(), "Cần chọn hóa đơn để phát hành.");
+		invlistPg.okphathanhloi.click();
+	}
+	
+	@Test
+	public void phathanhchon1hd() {
+		// TH phat hanh thanh cong tung hoa don
+		InvM_InvoiceListPage invlistPg;
+		invlistPg = new InvM_InvoiceListPage(getDriver());
+		invlistPg.selectInvoice();
+		invlistPg.phathanh1hd();
+		Assert.assertEquals(invlistPg.phathanhthanhcong.getText(), "Cần chọn hóa đơn để phát hành.");
+	}
+	
+	@Test
+	public void phathanhnhieuhd() {
+		// TH phat hanh thanh cong nhieu hoa don
+		InvM_InvoiceListPage invlistPg;
+		invlistPg = new InvM_InvoiceListPage(getDriver());
+		invlistPg.selectInvoice();
+		
 	}
 }

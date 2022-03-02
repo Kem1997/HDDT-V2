@@ -48,30 +48,30 @@
 			<!-- <include name="deleteAuthorization" /> -->
 			<!-- </methods> -->
 			<!-- </class> -->
-<!-- 			<class name="tests.Cat_CustomerTest"> -->
-<!-- 			<methods> -->
-<!-- 			<include name="clickCategory" /> -->
-<!-- 			<include name="clickCustomer" /> -->
-<!-- 			<include name="createBlankAll" /> -->
-<!-- 			<include name="create1RequiredFieldBlank1" /> -->
-<!-- 			<include name="create1RequiredFieldBlank2" /> -->
-<!-- 			<include name="create1RequiredFieldBlank3" /> -->
-<!-- 			<include name="createCustomerSuccess" /> -->
-<!-- 			<include name="checkCustomer" /> -->
-<!-- 			<include name="editCustomer" /> -->
-<!-- 			<include name="deleteCustomer" /> -->
-<!-- 			</methods> -->
-<!-- 			</class> -->
-<!-- 			<class name="tests.Cat_CustomerUploadTest"> -->
-<!-- 			<methods> -->
-<!-- 			<include name="clickCustomerUpload" /> -->
-<!-- 			<include name="createCustomerUploadFail1" /> -->
-<!-- 			<include name="createCustomerUploadFail2" /> -->
-<!-- 			<include name="createCustomerUploadSuccess" /> -->
-<!-- 			<include name="deleteFileUploadSuccess" /> -->
-<!-- 			<include name="notDeleteFileUpload" /> -->
-<!-- 			</methods> -->
-<!-- 			</class> -->
+			<!-- <class name="tests.Cat_CustomerTest"> -->
+			<!-- <methods> -->
+			<!-- <include name="clickCategory" /> -->
+			<!-- <include name="clickCustomer" /> -->
+			<!-- <include name="createBlankAll" /> -->
+			<!-- <include name="create1RequiredFieldBlank1" /> -->
+			<!-- <include name="create1RequiredFieldBlank2" /> -->
+			<!-- <include name="create1RequiredFieldBlank3" /> -->
+			<!-- <include name="createCustomerSuccess" /> -->
+			<!-- <include name="checkCustomer" /> -->
+			<!-- <include name="editCustomer" /> -->
+			<!-- <include name="deleteCustomer" /> -->
+			<!-- </methods> -->
+			<!-- </class> -->
+			<!-- <class name="tests.Cat_CustomerUploadTest"> -->
+			<!-- <methods> -->
+			<!-- <include name="clickCustomerUpload" /> -->
+			<!-- <include name="createCustomerUploadFail1" /> -->
+			<!-- <include name="createCustomerUploadFail2" /> -->
+			<!-- <include name="createCustomerUploadSuccess" /> -->
+			<!-- <include name="deleteFileUploadSuccess" /> -->
+			<!-- <include name="notDeleteFileUpload" /> -->
+			<!-- </methods> -->
+			<!-- </class> -->
 			<!-- <class name="tests.Cat_ProductManagementTest"> -->
 			<!-- <methods> -->
 			<!-- <include name="clickProductManagement" /> -->
@@ -87,39 +87,43 @@
 			<!-- </methods> -->
 			<!-- </class> -->
 
-<!-- 			<class name="tests.DK_DangKySuDungTest"> -->
-<!-- 			<methods> -->
-<!-- 			<include name="clickCatDangKySuDung" /> -->
-<!-- 			</methods> -->
-<!-- 			</class> -->
+			<!-- <class name="tests.DK_DangKySuDungTest"> -->
+			<!-- <methods> -->
+			<!-- <include name="clickCatDangKySuDung" /> -->
+			<!-- </methods> -->
+			<!-- </class> -->
 
-<!-- 			<class name="tests.DK_ThongBaoPHTest"> -->
-<!-- 			<methods> -->
-<!-- 			<include name="clickThongBaoPH" /> -->
-<!-- 			<include name="chooseInvoiceTypeFail" /> -->
-<!-- 			<include name="chooseInvoiceTypeSuccess" /> -->
-<!-- 			<include name="editInvoiceType" /> -->
-<!-- 			<include name="deleteInvoiceType" /> -->
-<!-- 			<include name="createAnnouncementSuccess" /> -->
-<!-- 			<include name="editAnnouncement" /> -->
-<!-- 			<include name="deleteAnnouncement" /> -->
-<!-- 			<include name="acceptAnnouncementSuccess" /> -->
-<!-- 			</methods> -->
-<!-- 			</class> -->
+			<!-- <class name="tests.DK_ThongBaoPHTest"> -->
+			<!-- <methods> -->
+			<!-- <include name="clickThongBaoPH" /> -->
+			<!-- <include name="chooseInvoiceTypeFail" /> -->
+			<!-- <include name="chooseInvoiceTypeSuccess" /> -->
+			<!-- <include name="editInvoiceType" /> -->
+			<!-- <include name="deleteInvoiceType" /> -->
+			<!-- <include name="createAnnouncementSuccess" /> -->
+			<!-- <include name="editAnnouncement" /> -->
+			<!-- <include name="deleteAnnouncement" /> -->
+			<!-- <include name="acceptAnnouncementSuccess" /> -->
+			<!-- </methods> -->
+			<!-- </class> -->
 
 			<class name="tests.InvM_InvoiceListTest">
 				<methods>
 					<include name="clickInvoiceManagement" />
-<!-- 					<include name="laphoadonFail1" /> -->
-<!-- 					<include name="laphoadonFail2" /> -->
-<!-- 					<include name="laphoadonFail3" /> -->
-<!-- 					<include name="laphoadonFail4" /> -->
-<!--                 	<include name="laphoadonFail5" /> -->
+					<!-- <include name="laphoadonFail1" /> -->
+					<!-- <include name="laphoadonFail2" /> -->
+					<!-- <include name="laphoadonFail3" /> -->
+					<!-- <include name="laphoadonFail4" /> -->
+					<!-- <include name="laphoadonFail5" /> -->
 <!-- 					<include name="laphoadon1dongSuccess" /> -->
 <!-- 					<include name="laphoadonnhieudongSuccess" /> -->
 <!-- 					<include name="laphoadonkhongchiuthue" /> -->
+<!-- 					<include name="laphoadonkhongkekhaithue" /> -->
 <!-- 					<include name="laphoadonthue0" /> -->
+<!-- 					<include name="laphoadonthue3" /> -->
 <!-- 					<include name="laphoadonthue5" /> -->
+<!-- 					<include name="laphoadonthue7" /> -->
+<!-- 					<include name="laphoadonthue8" /> -->
 <!-- 					<include name="laphoadonthue10" /> -->
 <!-- 					<include name="laphoadoncokhuyenmai" /> -->
 <!-- 					<include name="laphoadoncochietkhau" /> -->
@@ -127,6 +131,7 @@
 <!-- 					<include name="laphdcotatcahinhthuc" /> -->
 					<include name="suahoadon" />
 					<include name="xoahoadon" />
+					<include name="phathanhkhongchonhoadon" />
 				</methods>
 			</class>
 		</classes>
