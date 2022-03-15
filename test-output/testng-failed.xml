@@ -5,6 +5,14 @@
     <parameter name="testname" value="test1"/>
     <parameter name="user" value="user1"/>
     <classes>
+      <class name="tests.Cat_CustomerUploadTest">
+        <methods>
+          <include name="notDeleteFileUpload"/>
+          <include name="deleteFileUploadSuccess"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- tests.Cat_CustomerUploadTest -->
       <class name="tests.LoginTest">
         <methods>
           <include name="loginByAdmin"/>

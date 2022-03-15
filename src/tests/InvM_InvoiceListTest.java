@@ -249,21 +249,33 @@ public class InvM_InvoiceListTest extends BaseTest{
 	}
 	
 	@Test
-	public void phathanhchon1hd() {
+	public void phathanhthanhcongchon1hd() {
 		// TH phat hanh thanh cong tung hoa don
 		InvM_InvoiceListPage invlistPg;
 		invlistPg = new InvM_InvoiceListPage(getDriver());
 		invlistPg.selectInvoice();
 		invlistPg.phathanh1hd();
-		Assert.assertEquals(invlistPg.phathanhthanhcong.getText(), "Cần chọn hóa đơn để phát hành.");
+		Assert.assertEquals(invlistPg.title.getText(), "Phát hành thành công: 1 hóa đơn");
 	}
 	
 	@Test
-	public void phathanhnhieuhd() {
+	public void phathanhthanhcongnhieuhd() {
 		// TH phat hanh thanh cong nhieu hoa don
 		InvM_InvoiceListPage invlistPg;
 		invlistPg = new InvM_InvoiceListPage(getDriver());
+		invlistPg.clickInvoiceList();
 		invlistPg.selectInvoice();
-		
+		invlistPg.phathanhnhieuhd();
+		Assert.assertEquals(invlistPg.title.getText(), "Phát hành thành công: 3 hóa đơn");
+	}
+	
+	@Test
+	public void phathanhthanhcongtatcahd() {
+		// TH phat hanh thanh cong nhieu hoa don
+		InvM_InvoiceListPage invlistPg;
+		invlistPg = new InvM_InvoiceListPage(getDriver());
+		invlistPg.clickInvoiceList();
+		invlistPg.selectInvoice();
+		Assert.assertEquals("Phát hành thành công: " + invlistPg.phathanhtatcahd() + " hóa đơn", invlistPg.title.getText());
 	}
 }

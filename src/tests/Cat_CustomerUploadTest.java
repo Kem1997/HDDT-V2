@@ -45,6 +45,7 @@ public class Cat_CustomerUploadTest extends BaseTest{
 		// Upload KH thành công
 		Cat_CustomerUploadPage customerupload;
 		customerupload = new Cat_CustomerUploadPage(getDriver());
+		customerupload.clickAddTemplate();
 		customerupload.addTemplate();
 		Assert.assertEquals(customerupload.title.getText(), "Quản lý upload khách hàng");
 	}

@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 import Model.HangHoa;
 import Model.ThongTinHD;
@@ -357,7 +358,7 @@ public class InvM_InvoiceListPage extends BaseTest {
 
 	public void selectInvoice() {
 		Select seri = new Select(serial);
-		seri.selectByVisibleText("1C22TKA");
+		seri.selectByVisibleText("1C22TGT");
 		timkiem.click();
 	}
 	
@@ -630,10 +631,15 @@ public class InvM_InvoiceListPage extends BaseTest {
 	}
 	
 	public void phathanh1hd() {
-		// Chi chon 1 hoa don. Vd hoa don thu 2
-		WebElement chon1hd = driver.findElement(By.xpath("//td[contains(text(),'2')]//parent::tr//td[10]//input"));
+		// Chi chon 1 hoa don. Vd hoa don dau tien
+		WebElement chon1hd = driver.findElement(By.xpath("//td[contains(text(),'1')]//parent::tr//td[10]//input"));
 		chon1hd.click();
 		phathanhhd.click();
+		try {
+			Thread.sleep(5000);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 	
 	public void phathanhnhieuhd() {
@@ -645,13 +651,25 @@ public class InvM_InvoiceListPage extends BaseTest {
 		WebElement chonhd3 = driver.findElement(By.xpath("//td[contains(text(),'3')]//parent::tr//td[10]//input"));
 		chonhd3.click();
 		phathanhhd.click();
+		try {
+			Thread.sleep(5000);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 	
-	public void phathanhtatcahd() {
+	public int phathanhtatcahd() {
 		// Phat hanh tat ca hoa don cua 1 trang
-		selectInvoice();
+		List<WebElement> soluonghd = driver.findElements(By.xpath("//tbody//tr"));
+		int i = soluonghd.size();
 		WebElement chontatca = driver.findElement(By.xpath("//input[@id='ckbAll']"));
 		chontatca.click();
 		phathanhhd.click();
+		try {
+			Thread.sleep(5000);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return i;
 	}
 }

@@ -1,10 +1,17 @@
 package pages;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -58,19 +65,172 @@ public class Cat_CustomerUploadPage extends BaseTest {
 		addtemplate.click();
 	}
 
-	public void addTemplate() {
-		selectfile.click();
+	public void handleUpload(String pathFile, String fileName)  {
+//	selectfile.click();
+	JavascriptExecutor js = (JavascriptExecutor)driver;
+	js.executeScript("arguments[0].click()",selectfile);
+	
+		Robot robot;
+		try {
+			robot = new Robot();
+			new Actions(driver).click(selectfile).perform();
+			
+			// coppy
+			StringSelection ss = new StringSelection(fileName);
+			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+			
+			robot.keyPress(KeyEvent.VK_CONTROL);
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			robot.keyPress(KeyEvent.VK_V);
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			robot.keyRelease(KeyEvent.VK_V);
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			robot.keyRelease(KeyEvent.VK_CONTROL);
+			StringSelection ss1 = new StringSelection(pathFile);//"E:\\Auto Test\\HDDT-V2\\data"
+			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss1, null);
+			robot.keyPress(KeyEvent.VK_F4);
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			robot.keyPress(KeyEvent.VK_CONTROL);
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			robot.keyPress(KeyEvent.VK_A);
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			robot.keyPress(KeyEvent.VK_BACK_SPACE);
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			robot.keyPress(KeyEvent.VK_CONTROL);
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			robot.keyPress(KeyEvent.VK_V);
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			robot.keyRelease(KeyEvent.VK_V);
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			robot.keyRelease(KeyEvent.VK_CONTROL);
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			robot.keyPress(KeyEvent.VK_ENTER);
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			robot.keyRelease(KeyEvent.VK_ENTER);
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			robot.keyPress(KeyEvent.VK_ENTER);
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			robot.keyRelease(KeyEvent.VK_ENTER);
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}robot.keyPress(KeyEvent.VK_ENTER);
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			robot.keyRelease(KeyEvent.VK_ENTER);
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}robot.keyPress(KeyEvent.VK_ENTER);
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			robot.keyRelease(KeyEvent.VK_ENTER);
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} catch (AWTException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		
 //		driver.findElement(By.id("inputFile"));
-		driver.switchTo()
-        .activeElement()
-        .sendKeys("E:\\Auto Test\\HDDT-V2\\data\\MauUploadKH.xlsx");
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+//		driver.switchTo()
+//        .activeElement()
+//        .sendKeys("E:\\Auto Test\\HDDT-V2\\data\\MauUploadKH.xlsx");
+//		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 //		String filePath = System.getProperty(("user.dir")+ filename);
 //		selectfile.click();
 //		selectfile.sendKeys(filePath);
 		btnupload.click();
 	}
-	
+
 	public void deleteFileUpload(String FileName) {
 		if (filename.getText().equals(FileName)) {
 			WebElement b = driver.findElement(By.xpath("//tr[1]//td[11]//a"));

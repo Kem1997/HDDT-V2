@@ -9,11 +9,49 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test1</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">67,916</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test1</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num attn">3</td><td class="num">69,614</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test1 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.LoginTest</td><td><a href="#m0">loginByAdmin</a></td><td rowspan="1">1646128634609</td><td rowspan="1">11144</td></tr><tr><th colspan="4">Test1 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">tests.InvM_InvoiceListTest</td><td><a href="#m1">clickInvoiceManagement</a></td><td rowspan="1">1646128645767</td><td rowspan="1">101</td></tr><tr class="passedeven"><td><a href="#m2">phathanhkhongchonhoadon</a></td><td rowspan="1">1646128695870</td><td rowspan="1">1327</td></tr><tr class="passedeven"><td><a href="#m3">suahoadon</a></td><td rowspan="1">1646128645870</td><td rowspan="1">45193</td></tr><tr class="passedeven"><td><a href="#m4">xoahoadon</a></td><td rowspan="1">1646128691065</td><td rowspan="1">4803</td></tr><tr class="passedodd"><td rowspan="1">tests.LoginTest</td><td><a href="#m5">loginWithBlankField</a></td><td rowspan="1">1646128633676</td><td rowspan="1">929</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test1 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">tests.Cat_CustomerUploadTest</td><td><a href="#m0">deleteFileUploadSuccess</a></td><td rowspan="1">1647336576143</td><td rowspan="1">2507</td></tr><tr class="failedeven"><td><a href="#m1">notDeleteFileUpload</a></td><td rowspan="1">1647336578653</td><td rowspan="1">10092</td></tr><tr class="failedodd"><td rowspan="1">tests.LoginTest</td><td><a href="#m2">loginByAdmin</a></td><td rowspan="1">1647336524439</td><td rowspan="1">11504</td></tr><tr><th colspan="4">Test1 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.Cat_CustomerTest</td><td><a href="#m3">clickCategory</a></td><td rowspan="1">1647336535951</td><td rowspan="1">88</td></tr><tr class="passedodd"><td rowspan="2">tests.Cat_CustomerUploadTest</td><td><a href="#m4">clickCustomerUpload</a></td><td rowspan="1">1647336536041</td><td rowspan="1">320</td></tr><tr class="passedodd"><td><a href="#m5">createCustomerUploadSuccess</a></td><td rowspan="1">1647336536364</td><td rowspan="1">39777</td></tr><tr class="passedeven"><td rowspan="1">tests.LoginTest</td><td><a href="#m6">loginWithBlankField</a></td><td rowspan="1">1647336523513</td><td rowspan="1">921</td></tr></tbody>
 </table>
-<h2>Test1</h2><h3 id="m0">tests.LoginTest#loginByAdmin</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.awaitility.core.ConditionTimeoutException: Condition with tests.LoginTest was not fulfilled within 10 seconds.
+<h2>Test1</h2><h3 id="m0">tests.Cat_CustomerUploadTest#deleteFileUploadSuccess</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Xóa thành công.] but found [Quản lý upload khách hàng]
+	at tests.Cat_CustomerUploadTest.deleteFileUploadSuccess(Cat_CustomerUploadTest.java:59)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.Cat_CustomerUploadTest#notDeleteFileUpload</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//tr[1]//td[11]//a&quot;}
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-6&apos;, revision: &apos;5f43a29cfc&apos;
+System info: host: &apos;DESKTOP-IASR4KE&apos;, ip: &apos;172.16.36.12&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\haton\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49801}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1fc455235630e32d41efeaef62f94170
+*** Element info: {Using=xpath, value=//tr[1]//td[11]//a}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy18.isEnabled(Unknown Source)
+	at pages.Cat_CustomerUploadPage.isEnabled(Cat_CustomerUploadPage.java:246)
+	at tests.Cat_CustomerUploadTest.notDeleteFileUpload(Cat_CustomerUploadTest.java:67)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.LoginTest#loginByAdmin</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.awaitility.core.ConditionTimeoutException: Condition with tests.LoginTest was not fulfilled within 10 seconds.
 	at org.awaitility.core.ConditionAwaiter.await(ConditionAwaiter.java:165)
 	at org.awaitility.core.CallableCondition.await(CallableCondition.java:78)
 	at org.awaitility.core.CallableCondition.await(CallableCondition.java:26)
@@ -32,10 +70,9 @@ Caused by: java.lang.NullPointerException: Cannot invoke &quot;org.openqa.seleni
 	at org.awaitility.core.ConditionAwaiter$ConditionPoller.call(ConditionAwaiter.java:209)
 	... 4 more
 ... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.InvM_InvoiceListTest#clickInvoiceManagement</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.InvM_InvoiceListTest#phathanhkhongchonhoadon</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">tests.InvM_InvoiceListTest#suahoadon</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">tests.InvM_InvoiceListTest#xoahoadon</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">tests.LoginTest#loginWithBlankField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">tests.Cat_CustomerTest#clickCategory</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">tests.Cat_CustomerUploadTest#clickCustomerUpload</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">tests.Cat_CustomerUploadTest#createCustomerUploadSuccess</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">tests.LoginTest#loginWithBlankField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
