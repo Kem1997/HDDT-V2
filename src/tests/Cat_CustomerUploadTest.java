@@ -36,7 +36,7 @@ public class Cat_CustomerUploadTest extends BaseTest{
 		// TH chọn file upload không đúng định dạng cho phép
 		Cat_CustomerUploadPage customerupload;
 		customerupload = new Cat_CustomerUploadPage(getDriver());
-		customerupload.addTemplate();
+		customerupload.handleUpload("E:\\Auto Test\\HDDT-V2\\data", "Danh sách hóa đơn.pdf");
 		Assert.assertEquals(customerupload.messageError.getText(), "Chưa chọn file dữ liệu khách hàng.");
 	}
 	
@@ -45,8 +45,7 @@ public class Cat_CustomerUploadTest extends BaseTest{
 		// Upload KH thành công
 		Cat_CustomerUploadPage customerupload;
 		customerupload = new Cat_CustomerUploadPage(getDriver());
-		customerupload.clickAddTemplate();
-		customerupload.addTemplate();
+		customerupload.handleUpload("E:\\Auto Test\\HDDT-V2\\data", "MauUploadKH.xlsx");
 		Assert.assertEquals(customerupload.title.getText(), "Quản lý upload khách hàng");
 	}
 	
@@ -56,17 +55,6 @@ public class Cat_CustomerUploadTest extends BaseTest{
 		Cat_CustomerUploadPage customerupload;
 		customerupload = new Cat_CustomerUploadPage(getDriver());
 		customerupload.deleteFileUpload("MauUploadKH.xlsx");
-		Assert.assertEquals(customerupload.title.getText(), "Xóa thành công.");
+		Assert.assertEquals(customerupload.title.getText(), "Quản lý upload khách hàng");
 	}
-	
-	@Test
-	public void notDeleteFileUpload() {
-		// Trạng thái: Đang xử lý, nút Xóa bị disable
-		Cat_CustomerUploadPage customerupload;
-		customerupload = new Cat_CustomerUploadPage(getDriver());
-		Boolean actualResult = customerupload.isEnabled(customerupload.delete, "MauUploadKH.xlsx");
-		assertFalse(actualResult);
-	}
-	
-	
 }

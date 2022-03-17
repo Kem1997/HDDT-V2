@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">7 methods, 3 failed,   4 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,17 +104,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.Cat_CustomerUploadTest" class="method navigator-link" hash-for-method="deleteFileUploadSuccess">deleteFileUploadSuccess</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="loginByAdmin">loginByAdmin</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.Cat_CustomerUploadTest" class="method navigator-link" hash-for-method="notDeleteFileUpload">notDeleteFileUpload</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -128,22 +118,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.Cat_CustomerTest" class="method navigator-link" hash-for-method="clickCategory">clickCategory</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="tests.Rep_BangKeHDTest" class="method navigator-link" hash-for-method="checkBaocaoBangKeHD">checkBaocaoBangKeHD</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.Cat_CustomerUploadTest" class="method navigator-link" hash-for-method="clickCustomerUpload">clickCustomerUpload</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.Cat_CustomerUploadTest" class="method navigator-link" hash-for-method="createCustomerUploadSuccess">createCustomerUploadSuccess</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="loginWithBlankField">loginWithBlankField</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="tests.Rep_TinhHinhSuDungTest" class="method navigator-link" hash-for-method="clickReport">clickReport</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -158,68 +138,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">tests.Cat_CustomerUploadTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="deleteFileUploadSuccess">
-                  </a> <!-- deleteFileUploadSuccess -->
-                  <span class="method-name">deleteFileUploadSuccess</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [Xóa thành công.] but found [Quản lý upload khách hàng]
-	at tests.Cat_CustomerUploadTest.deleteFileUploadSuccess(Cat_CustomerUploadTest.java:59)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-... Removed 24 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="notDeleteFileUpload">
-                  </a> <!-- notDeleteFileUpload -->
-                  <span class="method-name">notDeleteFileUpload</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//tr[1]//td[11]//a&quot;}
-  (Session info: chrome=99.0.4844.51)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.0.0-alpha-6&apos;, revision: &apos;5f43a29cfc&apos;
-System info: host: &apos;DESKTOP-IASR4KE&apos;, ip: &apos;172.16.36.12&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\haton\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49801}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 1fc455235630e32d41efeaef62f94170
-*** Element info: {Using=xpath, value=//tr[1]//td[11]//a}
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy18.isEnabled(Unknown Source)
-	at pages.Cat_CustomerUploadPage.isEnabled(Cat_CustomerUploadPage.java:246)
-	at tests.Cat_CustomerUploadTest.notDeleteFileUpload(Cat_CustomerUploadTest.java:67)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-... Removed 23 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
@@ -258,21 +176,14 @@ Caused by: java.lang.NullPointerException: Cannot invoke &quot;org.openqa.seleni
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">tests.Cat_CustomerUploadTest</span>
+              <span class="class-name">tests.Rep_BangKeHDTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="clickCustomerUpload">
-                  </a> <!-- clickCustomerUpload -->
-                  <span class="method-name">clickCustomerUpload</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="createCustomerUploadSuccess">
-                  </a> <!-- createCustomerUploadSuccess -->
-                  <span class="method-name">createCustomerUploadSuccess</span>
+                  <a name="checkBaocaoBangKeHD">
+                  </a> <!-- checkBaocaoBangKeHD -->
+                  <span class="method-name">checkBaocaoBangKeHD</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -280,29 +191,14 @@ Caused by: java.lang.NullPointerException: Cannot invoke &quot;org.openqa.seleni
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">tests.LoginTest</span>
+              <span class="class-name">tests.Rep_TinhHinhSuDungTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginWithBlankField">
-                  </a> <!-- loginWithBlankField -->
-                  <span class="method-name">loginWithBlankField</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.Cat_CustomerTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="clickCategory">
-                  </a> <!-- clickCategory -->
-                  <span class="method-name">clickCategory</span>
+                  <a name="clickReport">
+                  </a> <!-- clickReport -->
+                  <span class="method-name">clickReport</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -323,23 +219,19 @@ Caused by: java.lang.NullPointerException: Cannot invoke &quot;org.openqa.seleni
     &lt;classes&gt;
       &lt;class name=&quot;tests.LoginTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;loginWithBlankField&quot;/&gt;
           &lt;include name=&quot;loginByAdmin&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- tests.LoginTest --&gt;
-      &lt;class name=&quot;tests.Cat_CustomerTest&quot;&gt;
+      &lt;class name=&quot;tests.Rep_TinhHinhSuDungTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;clickCategory&quot;/&gt;
+          &lt;include name=&quot;clickReport&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- tests.Cat_CustomerTest --&gt;
-      &lt;class name=&quot;tests.Cat_CustomerUploadTest&quot;&gt;
+      &lt;/class&gt; &lt;!-- tests.Rep_TinhHinhSuDungTest --&gt;
+      &lt;class name=&quot;tests.Rep_BangKeHDTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;clickCustomerUpload&quot;/&gt;
-          &lt;include name=&quot;createCustomerUploadSuccess&quot;/&gt;
-          &lt;include name=&quot;deleteFileUploadSuccess&quot;/&gt;
-          &lt;include name=&quot;notDeleteFileUpload&quot;/&gt;
+          &lt;include name=&quot;checkBaocaoBangKeHD&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- tests.Cat_CustomerUploadTest --&gt;
+      &lt;/class&gt; &lt;!-- tests.Rep_BangKeHDTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test1 --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -379,35 +271,19 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(7);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'createCustomerUploadSuccess')
-data.setCell(0, 2, 'tests.Cat_CustomerUploadTest')
-data.setCell(0, 3, 39777);
+data.setCell(0, 1, 'checkBaocaoBangKeHD')
+data.setCell(0, 2, 'tests.Rep_BangKeHDTest')
+data.setCell(0, 3, 62669);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'loginByAdmin')
 data.setCell(1, 2, 'tests.LoginTest')
-data.setCell(1, 3, 11504);
+data.setCell(1, 3, 11624);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'notDeleteFileUpload')
-data.setCell(2, 2, 'tests.Cat_CustomerUploadTest')
-data.setCell(2, 3, 10092);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'deleteFileUploadSuccess')
-data.setCell(3, 2, 'tests.Cat_CustomerUploadTest')
-data.setCell(3, 3, 2507);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'loginWithBlankField')
-data.setCell(4, 2, 'tests.LoginTest')
-data.setCell(4, 3, 921);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'clickCustomerUpload')
-data.setCell(5, 2, 'tests.Cat_CustomerUploadTest')
-data.setCell(5, 3, 320);
-data.setCell(6, 0, 6)
-data.setCell(6, 1, 'clickCategory')
-data.setCell(6, 2, 'tests.Cat_CustomerTest')
-data.setCell(6, 3, 88);
+data.setCell(2, 1, 'clickReport')
+data.setCell(2, 2, 'tests.Rep_TinhHinhSuDungTest')
+data.setCell(2, 3, 88);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -427,16 +303,12 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">15 ignored methods</span>
+            <span class="header-content">5 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">tests.Cat_CustomerUploadTest</span>
+              <span class="ignored-class-name">tests.Rep_BangKeHDTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">createCustomerUploadFail1</span>
-                <br/>
-                <span class="ignored-method-name">createCustomerUploadFail2</span>
-                <br/>
                 <span class="ignored-method-name">tearDown</span>
                 <br/>
                 <span class="ignored-method-name">setUp</span>
@@ -444,26 +316,15 @@ return data;
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">tests.Cat_CustomerTest</span>
+              <span class="ignored-class-name">tests.LoginTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">createCustomerSuccess</span>
+                <span class="ignored-method-name">loginWithBlankField</span>
                 <br/>
-                <span class="ignored-method-name">deleteCustomer</span>
-                <br/>
-                <span class="ignored-method-name">clickCustomer</span>
-                <br/>
-                <span class="ignored-method-name">createBlankAll</span>
-                <br/>
-                <span class="ignored-method-name">editCustomer</span>
-                <br/>
-                <span class="ignored-method-name">create1RequiredFieldBlank3</span>
-                <br/>
-                <span class="ignored-method-name">create1RequiredFieldBlank2</span>
-                <br/>
-                <span class="ignored-method-name">checkCustomer</span>
-                <br/>
-                <span class="ignored-method-name">create1RequiredFieldBlank1</span>
-                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">tests.Rep_TinhHinhSuDungTest</span>
+              <div class="ignored-methods-div">
                 <span class="ignored-method-name">tearDown</span>
                 <br/>
                 <span class="ignored-method-name">setUp</span>
@@ -484,51 +345,31 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">loginWithBlankField</span>
-                <span class="method-start">3562 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">loginByAdmin</span>
-                <span class="method-start">4488 ms</span>
+                <span class="method-start">3526 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.Cat_CustomerTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tests.Rep_TinhHinhSuDungTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">clickCategory</span>
-                <span class="method-start">16000 ms</span>
+                <span class="method-name">clickReport</span>
+                <span class="method-start">15161 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.Cat_CustomerUploadTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tests.Rep_BangKeHDTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">clickCustomerUpload</span>
-                <span class="method-start">16090 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">createCustomerUploadSuccess</span>
-                <span class="method-start">16413 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">deleteFileUploadSuccess</span>
-                <span class="method-start">56192 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">notDeleteFileUpload</span>
-                <span class="method-start">58702 ms</span>
+                <span class="method-name">checkBaocaoBangKeHD</span>
+                <span class="method-start">15255 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">68803 ms</span>
+                <span class="method-start">77927 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

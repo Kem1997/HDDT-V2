@@ -75,7 +75,7 @@ public class Cat_CustomerUploadPage extends BaseTest {
 			robot = new Robot();
 			new Actions(driver).click(selectfile).perform();
 			
-			// coppy
+			// coppy fileName
 			StringSelection ss = new StringSelection(fileName);
 			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
 			
@@ -242,13 +242,5 @@ public class Cat_CustomerUploadPage extends BaseTest {
 			// TODO: handle exception
 		}
 		ok.click();
-	}
-	
-	public boolean isEnabled(WebElement ele, String FileName) {
-		if (ele.isEnabled() && filename.getText().equals(FileName)) {
-			return true;
-		} else {
-			return false;
-		}
 	}
 }
