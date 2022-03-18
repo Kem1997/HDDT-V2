@@ -9,9 +9,9 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test1</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">78,644</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test1</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">117,468</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test1 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.LoginTest</td><td><a href="#m0">loginByAdmin</a></td><td rowspan="1">1647510586496</td><td rowspan="1">11624</td></tr><tr><th colspan="4">Test1 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.Rep_BangKeHDTest</td><td><a href="#m1">checkBaocaoBangKeHD</a></td><td rowspan="1">1647510598225</td><td rowspan="1">62669</td></tr><tr class="passedodd"><td rowspan="1">tests.Rep_TinhHinhSuDungTest</td><td><a href="#m2">clickReport</a></td><td rowspan="1">1647510598131</td><td rowspan="1">88</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test1 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.LoginTest</td><td><a href="#m0">loginByAdmin</a></td><td rowspan="1">1647600296173</td><td rowspan="1">11772</td></tr><tr class="failedodd"><td rowspan="1">tests.Rep_BangKeChiTietTest</td><td><a href="#m1">checkTongTienBCBangKeChiTiet</a></td><td rowspan="1">1647600310271</td><td rowspan="1">98944</td></tr><tr><th colspan="4">Test1 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.Rep_BangKeChiTietTest</td><td><a href="#m2">checkThongTinChungBCBangKeChiTiet</a></td><td rowspan="1">1647600308046</td><td rowspan="1">2223</td></tr><tr class="passedodd"><td rowspan="1">tests.Rep_TinhHinhSuDungTest</td><td><a href="#m3">clickReport</a></td><td rowspan="1">1647600307960</td><td rowspan="1">84</td></tr></tbody>
 </table>
 <h2>Test1</h2><h3 id="m0">tests.LoginTest#loginByAdmin</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.awaitility.core.ConditionTimeoutException: Condition with tests.LoginTest was not fulfilled within 10 seconds.
 	at org.awaitility.core.ConditionAwaiter.await(ConditionAwaiter.java:165)
@@ -32,7 +32,19 @@ Caused by: java.lang.NullPointerException: Cannot invoke &quot;org.openqa.seleni
 	at org.awaitility.core.ConditionAwaiter$ConditionPoller.call(ConditionAwaiter.java:209)
 	... 4 more
 ... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.Rep_BangKeHDTest#checkBaocaoBangKeHD</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.Rep_TinhHinhSuDungTest#clickReport</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.Rep_BangKeChiTietTest#checkTongTienBCBangKeChiTiet</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NumberFormatException: For input string: &quot;Tổng cộng: 7435000&quot;
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
+	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.base/java.lang.Float.parseFloat(Float.java:461)
+	at pages.Rep_BangKeChiTietPage.checkTienBaoCao(Rep_BangKeChiTietPage.java:103)
+	at tests.Rep_BangKeChiTietTest.checkTongTienBCBangKeChiTiet(Rep_BangKeChiTietTest.java:24)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.Rep_BangKeChiTietTest#checkThongTinChungBCBangKeChiTiet</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">tests.Rep_TinhHinhSuDungTest#clickReport</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
