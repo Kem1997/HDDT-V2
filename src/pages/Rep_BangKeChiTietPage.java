@@ -41,10 +41,13 @@ public class Rep_BangKeChiTietPage extends BasePage {
 	static WebElement info;
 
 	@FindBy(xpath = "//*[text()='Tổng cộng: ']/parent::*")
-	static WebElement tongtienpage;
+	static WebElement dongtongtienpage;
 
 	@FindBy(xpath = "//a[text()='>']")
 	static WebElement next;
+	
+	@FindBy(xpath = "//*[text()='Quay lại']")
+	static WebElement back;
 
 	public Rep_BangKeChiTietPage(WebDriver driver) {
 		this.driver = driver;
@@ -69,7 +72,7 @@ public class Rep_BangKeChiTietPage extends BasePage {
 		fromdate.click();
 		fromdate.sendKeys(TuNgay);
 		fromdate.sendKeys(Keys.ENTER);
-		
+
 		todate.click();
 		todate.sendKeys(DenNgay);
 		todate.sendKeys(Keys.ENTER);
@@ -90,10 +93,10 @@ public class Rep_BangKeChiTietPage extends BasePage {
 		}
 	}
 
-	public void checkTienBaoCao() throws Exception {
+	public Integer checkTienBaoCao() throws Exception {
 		List<WebElement> nextlist = driver.findElements(By.xpath("//a[text()='>']"));
-		int i=0;
-		while (!nextlist.isEmpty()) {
+		int i = 0;
+		while (!nextlist.isEmpty() && nextlist != null) {
 			i++;
 			float tongtien = 0;
 			List<WebElement> tongtiendong = driver.findElements(By.xpath("//tbody//tr//td[12]"));
@@ -102,13 +105,28 @@ public class Rep_BangKeChiTietPage extends BasePage {
 					tongtien = tongtien + Float.parseFloat(tongtiendong.get(j).getText().replace(",", ""));
 				}
 			}
-			
-			String a=tongtienpage.getText();
-			float t= Float.parseFloat(tongtienpage.getText().replace(",", ""));
-			if (Float.parseFloat(tongtienpage.getText().replace(",", "")) != tongtien) {
+
+			String a = dongtongtienpage.getText();
+			String[] tachchuvaso = a.split("Tổng cộng: "); // Tach rieng chu va so
+			String tongcongso = tachchuvaso[1];
+			if (Float.parseFloat(tongcongso.replace(",", "")) != tongtien) {
 				throw new Exception("SAI TONG TIEN O PAGE " + i);
 			}
 			next.click();
+			try {
+				Thread.sleep(2000);
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+			nextlist = driver.findElements(By.xpath("//a[text()='>']")); // Gan lai gia tri next list để kiem tra lại
+																			// xem cai list co trong hay khong
 		}
+		
+		List<WebElement> donghoadon = driver.findElements(By.xpath("//tbody//tr"));
+		int k = donghoadon.size();
+		WebElement soluonghd = driver.findElement(By.xpath("//tbody//tr["+ k +"]//td[1]"));
+		int a = Integer.parseInt(soluonghd.getText());
+		back.click();
+		return a;
 	}
 }

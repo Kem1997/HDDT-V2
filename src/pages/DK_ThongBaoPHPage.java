@@ -74,10 +74,10 @@ public class DK_ThongBaoPHPage extends BaseTest {
 	@FindBy(xpath = "//tr[1]//td[6]//a/i")
 	static WebElement view;
 
-	@FindBy(xpath = "//button[@onclick='Publish_click(0);']")
+	@FindBy(xpath = "//button[text()='Gửi thông báo']")
 	static WebElement sendnotifications;
 
-	@FindBy(xpath = "//button[@onclick='Publish_click(0);']")
+	@FindBy(xpath = "//button[text()='Chấp nhận thông báo']")
 	static WebElement acceptnotifications;
 
 	@FindBy(xpath = "//tr[1]//td[7]//a/i")
@@ -171,7 +171,7 @@ public class DK_ThongBaoPHPage extends BaseTest {
 	}
 
 	public void addAnnounncement() {
-		addInvoiceType("AA", "22", "2000", "24/02/2022");
+		addInvoiceType("BB", "22", "1000", "24/03/2022");
 
 		savenotifications.click();
 		try {
@@ -201,12 +201,23 @@ public class DK_ThongBaoPHPage extends BaseTest {
 		if (status.getText().equals("Mới lập")) {
 			view.click();
 			sendnotifications.click();
+			
+			try {
+				Thread.sleep(1000);
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+			
+			ok.click();
+			
 			acceptnotifications.click();
 			try {
 				Thread.sleep(1000);
 			} catch (Exception e) {
 				// TODO: handle exception
 			}
+			
+			ok.click();
 		}
 	}
 }

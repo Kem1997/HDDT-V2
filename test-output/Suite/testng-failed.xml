@@ -5,13 +5,13 @@
     <parameter name="testname" value="test1"/>
     <parameter name="user" value="user1"/>
     <classes>
-      <class name="tests.Rep_BangKeChiTietTest">
+      <class name="tests.InvM_InvoiceIssueTest">
         <methods>
-          <include name="checkTongTienBCBangKeChiTiet"/>
+          <include name="thaythehdthanhcong1"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- tests.Rep_BangKeChiTietTest -->
+      </class> <!-- tests.InvM_InvoiceIssueTest -->
       <class name="tests.LoginTest">
         <methods>
           <include name="loginByAdmin"/>

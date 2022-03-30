@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test1</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Mar 18 17:44:52 ICT 2022</td>
+<td>Started on:</td><td>Wed Mar 30 14:29:18 ICT 2022</td>
 </tr>
-<tr><td>Total time:</td><td>117 seconds (117468 ms)</td>
+<tr><td>Total time:</td><td>46 seconds (46855 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,25 +75,64 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.Rep_BangKeChiTietTest.checkTongTienBCBangKeChiTiet()'><b>checkTongTienBCBangKeChiTiet</b><br>Test class: tests.Rep_BangKeChiTietTest</td>
-<td><div><pre>java.lang.NumberFormatException: For input string: &quot;T?ng c?ng: 7435000&quot;
-	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
-	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
-	at java.base/java.lang.Float.parseFloat(Float.java:461)
-	at pages.Rep_BangKeChiTietPage.checkTienBaoCao(Rep_BangKeChiTietPage.java:103)
-	at tests.Rep_BangKeChiTietTest.checkTongTienBCBangKeChiTiet(Rep_BangKeChiTietTest.java:24)
+<td title='tests.InvM_InvoiceIssueTest.thaythehdthanhcong1()'><b>thaythehdthanhcong1</b><br>Test class: tests.InvM_InvoiceIssueTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@class=&apos;active&apos;]&quot;}
+  (Session info: chrome=99.0.4844.84)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-6&apos;, revision: &apos;5f43a29cfc&apos;
+System info: host: &apos;DESKTOP-IASR4KE&apos;, ip: &apos;192.168.31.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.84, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\haton\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:65161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f08a259f1d6bfb5fea1be67cae947360
+*** Element info: {Using=xpath, value=//li[@class=&apos;active&apos;]}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy18.getText(Unknown Source)
+	at tests.InvM_InvoiceIssueTest.thaythehdthanhcong1(InvM_InvoiceIssueTest.java:78)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:832)
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1790508258", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1790508258'><pre>java.lang.NumberFormatException: For input string: &quot;T?ng c?ng: 7435000&quot;
-	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
-	at java.base/jdk.internal.math.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
-	at java.base/java.lang.Float.parseFloat(Float.java:461)
-	at pages.Rep_BangKeChiTietPage.checkTienBaoCao(Rep_BangKeChiTietPage.java:103)
-	at tests.Rep_BangKeChiTietTest.checkTongTienBCBangKeChiTiet(Rep_BangKeChiTietTest.java:24)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace283478919", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace283478919'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@class=&apos;active&apos;]&quot;}
+  (Session info: chrome=99.0.4844.84)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-6&apos;, revision: &apos;5f43a29cfc&apos;
+System info: host: &apos;DESKTOP-IASR4KE&apos;, ip: &apos;192.168.31.51&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.84, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\haton\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:65161}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f08a259f1d6bfb5fea1be67cae947360
+*** Element info: {Using=xpath, value=//li[@class=&apos;active&apos;]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy18.getText(Unknown Source)
+	at tests.InvM_InvoiceIssueTest.thaythehdthanhcong1(InvM_InvoiceIssueTest.java:78)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -118,8 +157,8 @@ function toggleAllBoxes() {
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:832)
 </pre></div></td>
-<td>98</td>
-<td>tests.Rep_BangKeChiTietTest@4803b726</td></tr>
+<td>30</td>
+<td>tests.InvM_InvoiceIssueTest@4b0d79fc</td></tr>
 <tr>
 <td title='tests.LoginTest.loginByAdmin()'><b>loginByAdmin</b><br>Test class: tests.LoginTest</td>
 <td><div><pre>org.awaitility.core.ConditionTimeoutException: Condition with tests.LoginTest was not fulfilled within 10 seconds.
@@ -140,8 +179,8 @@ Caused by: java.lang.NullPointerException: Cannot invoke &quot;org.openqa.seleni
 	at org.awaitility.core.ConditionAwaiter$ConditionPoller.call(ConditionAwaiter.java:222)
 	at org.awaitility.core.ConditionAwaiter$ConditionPoller.call(ConditionAwaiter.java:209)
 	... 4 more
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace384058959", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace384058959'><pre>org.awaitility.core.ConditionTimeoutException: Condition with tests.LoginTest was not fulfilled within 10 seconds.
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1640784786", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1640784786'><pre>org.awaitility.core.ConditionTimeoutException: Condition with tests.LoginTest was not fulfilled within 10 seconds.
 	at org.awaitility.core.ConditionAwaiter.await(ConditionAwaiter.java:165)
 	at org.awaitility.core.CallableCondition.await(CallableCondition.java:78)
 	at org.awaitility.core.CallableCondition.await(CallableCondition.java:26)
@@ -179,25 +218,7 @@ Caused by: java.lang.NullPointerException: Cannot invoke &quot;org.openqa.seleni
 	... 4 more
 </pre></div></td>
 <td>11</td>
-<td>tests.LoginTest@434a63ab</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='tests.Rep_TinhHinhSuDungTest.clickReport()'><b>clickReport</b><br>Test class: tests.Rep_TinhHinhSuDungTest</td>
-<td></td>
-<td>0</td>
-<td>tests.Rep_TinhHinhSuDungTest@f0da945</td></tr>
-<tr>
-<td title='tests.Rep_BangKeChiTietTest.checkThongTinChungBCBangKeChiTiet()'><b>checkThongTinChungBCBangKeChiTiet</b><br>Test class: tests.Rep_BangKeChiTietTest</td>
-<td></td>
-<td>2</td>
-<td>tests.Rep_BangKeChiTietTest@4803b726</td></tr>
+<td>tests.LoginTest@61001b64</td></tr>
 </table><p>
 </body>
 </html>

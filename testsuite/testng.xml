@@ -107,8 +107,8 @@
 			<!-- </methods> -->
 			<!-- </class> -->
 
-			<!-- <class name="tests.InvM_InvoiceListTest"> -->
-			<!-- <methods> -->
+			<class name="tests.InvM_InvoiceListTest">
+			<methods>
 			<!-- <include name="clickInvoiceManagement" /> -->
 			<!-- <include name="laphoadonFail1" /> -->
 			<!-- <include name="laphoadonFail2" /> -->
@@ -132,8 +132,30 @@
 			<!-- <include name="suahoadon" /> -->
 			<!-- <include name="xoahoadon" /> -->
 			<!-- <include name="phathanhthanhcongtatcahd" /> -->
-			<!-- </methods> -->
-			<!-- </class> -->
+			<include name="phathanhthanhconghdtruocthaotac" />
+			</methods>
+			</class>
+			
+			<class name="tests.InvM_InvoiceIssueTest">
+			<methods>
+			<include name="thaythehdthanhcong1" />
+			<include name="thaythehdthanhcong2" />
+			<include name="thaythehdthanhcong3" />
+			<include name="thaythehdthanhcong4" />
+			<include name="thaythehdthanhcong5" />
+			<include name="dieuchinhttthanhcong1" />
+			<include name="dieuchinhttthanhcong2" />
+			<include name="dieuchinhtangtienthanhcong1" />
+			<include name="dieuchinhtangtienthanhcong2" />
+			<include name="dieuchinhtangtienthanhcong3" />
+			<include name="dieuchinhtangtienthanhcong4" />
+			<include name="dieuchinhgiamtienthanhcong1" />
+			<include name="dieuchinhgiamtienthanhcong2" />
+			<include name="dieuchinhgiamtienthanhcong3" />
+			<include name="dieuchinhgiamtienthanhcong4" />
+			<include name="dieuchinhgiamtienthanhcong5" />
+			</methods>
+			</class>
 
 			<!-- <class name="tests.InvM_InvoiceUploadTest"> -->
 			<!-- <methods> -->
@@ -147,11 +169,11 @@
 			<!-- </methods> -->
 			<!-- </class> -->
 
-			<class name="tests.Rep_TinhHinhSuDungTest">
-				<methods>
-					<include name="clickReport" />
-				</methods>
-			</class>
+<!-- 			<class name="tests.Rep_TinhHinhSuDungTest"> -->
+<!-- 				<methods> -->
+<!-- 					<include name="clickReport" /> -->
+<!-- 				</methods> -->
+<!-- 			</class> -->
 
 <!-- 			<class name="tests.Rep_BangKeHDTest"> -->
 <!-- 				<methods> -->
@@ -159,12 +181,47 @@
 <!-- 				</methods> -->
 <!-- 			</class> -->
 			
-			<class name="tests.Rep_BangKeChiTietTest">
-				<methods>
-					<include name="checkThongTinChungBCBangKeChiTiet" />
-					<include name="checkTongTienBCBangKeChiTiet" />
-				</methods>
-			</class>
+<!-- 			<class name="tests.Rep_BangKeChiTietTest"> -->
+<!-- 				<methods> -->
+<!-- 	                <include name="checkThongTinChungBCBangKeChiTiet" /> -->
+<!-- 	                <include name="checkTongTienBCBangKeChiTiet" /> -->
+<!-- 					<include name="checkSoLuongHDBaoCaoVaDanhSachHD" /> -->
+<!-- 				</methods> -->
+<!-- 			</class> -->
+			
+<!-- 			<class name="tests.XuLyHD_HDThayTheTest"> -->
+<!-- 				<methods> -->
+<!-- 	                <include name="clickXuLyHoaDon" /> -->
+<!-- 				</methods> -->
+<!-- 			</class> -->
+
+<!-- 	<class name="tests.XuLyHD_ThongBaoHDSaiSotTest"> -->
+<!-- 		<methods> -->
+<!-- 			<include name="clickThongBaoHoaDonSaiSot" /> -->
+<!-- 			<include name="addThongBaoHDSaiSotFail1" /> -->
+<!-- 			<include name="addThongBaoHDSaiSotFail2" /> -->
+<!-- 			<include name="addThongBaoHDSaiSotFail3" /> -->
+<!-- 			<include name="addThongBaoHDSaiSotFail4" /> -->
+<!-- 			<include name="addThongBaoHDSaiSotFail5" /> -->
+<!-- 			<include name="addThongBaoHDSaiSotSuccess" /> -->
+<!-- 			<include name="editThongBaoHDSaiSot" /> -->
+<!-- 			<include name="deleteThongBaoHDSaiSot" /> -->
+<!-- 		</methods> -->
+<!-- 	</class> -->
+
+<!-- 	<class name="tests.XuLyHD_LapBCHuyTest"> -->
+<!-- 		<methods> -->
+<!-- 	                <include name="lapThongBaoPhatHanh" /> -->
+<!-- 	<include name="clickLapBaoCaoHuy" /> -->
+<!-- 	<include name="addThongBaoHuyHoaDonFail1" /> -->
+<!-- 	<include name="addThongBaoHuyHoaDonFail2" /> -->
+<!-- 	<include name="addThongBaoHuyHoaDonFail3" /> -->
+<!-- 	<include name="addThongBaoHuyHoaDonFail4" /> -->
+<!-- 	<include name="addThongBaoHuyHoaDonFail5" /> -->
+<!-- 	<include name="deleteDanhSachHDHuy" /> -->
+<!-- 	<include name="addThongBaoHoaDonSuccess" /> -->
+<!-- 				</methods> -->
+<!-- 			</class> -->
 		</classes>
 	</test>
 </suite>
