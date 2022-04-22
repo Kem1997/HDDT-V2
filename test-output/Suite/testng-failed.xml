@@ -5,13 +5,6 @@
     <parameter name="testname" value="test1"/>
     <parameter name="user" value="user1"/>
     <classes>
-      <class name="tests.InvM_InvoiceIssueTest">
-        <methods>
-          <include name="thaythehdthanhcong1"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- tests.InvM_InvoiceIssueTest -->
       <class name="tests.LoginTest">
         <methods>
           <include name="loginByAdmin"/>
@@ -19,6 +12,30 @@
           <include name="setUp"/>
         </methods>
       </class> <!-- tests.LoginTest -->
+      <class name="tests.InvM_InvoiceIssueTest">
+        <methods>
+          <include name="chuyendoihdlaymacqt"/>
+          <include name="dieuchinhtangtienthanhcong3"/>
+          <include name="chuyendoihdchualaymacqt"/>
+          <include name="setUp"/>
+          <include name="dieuchinhgiamtienthanhcong2"/>
+          <include name="thaythehdthanhcong1"/>
+          <include name="dieuchinhgiamtienthanhcong1"/>
+          <include name="thaythehdthanhcong2"/>
+          <include name="dieuchinhgiamtienthanhcong4"/>
+          <include name="dieuchinhgiamtienthanhcong5"/>
+          <include name="dieuchinhttthanhcong2"/>
+          <include name="dieuchinhgiamtienthanhcong3"/>
+          <include name="dieuchinhtangtienthanhcong4"/>
+          <include name="thaythehdthanhcong3"/>
+          <include name="dieuchinhttthanhcong1"/>
+          <include name="dieuchinhtangtienthanhcong1"/>
+          <include name="thaythehdthanhcong5"/>
+          <include name="thaythehdthanhcong4"/>
+          <include name="tearDown"/>
+          <include name="dieuchinhtangtienthanhcong2"/>
+        </methods>
+      </class> <!-- tests.InvM_InvoiceIssueTest -->
     </classes>
   </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -10,6 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
@@ -39,7 +40,7 @@ public class InvM_InvoiceIssuePage extends BaseTest {
 
 	@FindBy(xpath = "//div[@class='dropdown']//button")
 	static WebElement thaotac;
-	
+
 	@FindBy(xpath = "//td[7]")
 	static WebElement dstrangthai;
 
@@ -156,9 +157,21 @@ public class InvM_InvoiceIssuePage extends BaseTest {
 
 	@FindBy(xpath = "//button[text()='Xóa']")
 	static WebElement delete;
-	
+
 	@FindBy(xpath = "//li[@class='active']")
 	public static WebElement titlelaphd;
+
+	@FindBy(xpath = "//button[@id='convertPagination']")
+	static WebElement printChuyendoi;
+
+	@FindBy(xpath = "//p[contains(text(),'Người chuyển đổi')]")
+	public static WebElement titlechuyendoi;
+
+	@FindBy(xpath = "//button[contains(text(),'Close')]")
+	static WebElement close;
+
+	@FindBy(xpath = "//button[contains(text(),'Gửi')]")
+	static WebElement gui;
 
 	public InvM_InvoiceIssuePage(WebDriver driver) {
 		this.driver = driver;
@@ -198,9 +211,35 @@ public class InvM_InvoiceIssuePage extends BaseTest {
 		timkiem.click();
 	}
 
+	public void clickThaoTac() {
+		WebElement donghd1 = driver.findElement(By.xpath("//tbody//tr[1]"));
+		WebElement thaotacdong1 = donghd1.findElement(By.xpath("//td[9]//button"));
+		thaotacdong1.click();
+	}
+
 	public void clickchuyendoihd() {
-		selectInvoice("1C22TKA", "--Trạng thái--", "", "", "01/03/2022", "26/03/2022", "", "", "", "--Tất cả--");
-		thaotac.click();
+		clickThaoTac();
+		selectchuyendoi.click();
+
+		try {
+			Thread.sleep(2000);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		chuyendoi.click();
+		printChuyendoi.click();
+		try {
+			Thread.sleep(2000);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+//		driver.navigate().refresh();
+		
+		Actions actions = new Actions(driver);
+		actions.keyDown(Keys.CONTROL).sendKeys(Keys.F5).perform();
+
+		clickThaoTac();
 		selectchuyendoi.click();
 
 		try {
@@ -211,12 +250,6 @@ public class InvM_InvoiceIssuePage extends BaseTest {
 		chuyendoi.click();
 	}
 
-	public void clickThaoTac() {
-		WebElement donghd1 = driver.findElement(By.xpath("//tbody//tr[1]"));
-		WebElement thaotacdong1 = donghd1.findElement(By.xpath("//td[9]//button"));
-		thaotacdong1.click();
-	}
-	
 	public void clickthaythehd() {
 		clickThaoTac();
 		selectthaythe.click();
@@ -251,14 +284,37 @@ public class InvM_InvoiceIssuePage extends BaseTest {
 		dieuchinh.click();
 	}
 
+	public void clickCloseView() {
+		close.click();
+	}
+
+	public void layMaHoaDon() {
+		WebElement donghd1 = driver.findElement(By.xpath("//tbody//tr[1]"));
+		WebElement chondonghd1 = donghd1.findElement(By.xpath("//td[11]/input"));
+		WebElement trangthaihd1 = donghd1.findElement(By.xpath("//td[2]//p[2]"));
+
+		if (trangthaihd1.getText().equals("Chưa lấy mã của CQT")) {
+			chondonghd1.click();
+			laymahoadon.click();
+			gui.click();
+
+			try {
+				Thread.sleep(5000);
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+		
+	}
+
 	public List<ThongTinHD> getThongTinHDThayThe(String casetest) {
 		List<ThongTinHD> listthongtinhdthaythe = new ArrayList<ThongTinHD>();
 		List<HangHoa> listhanghoathaythe = new ArrayList<HangHoa>();
 		try {
 			listthongtinhdthaythe = ReadThongtinchungHD
 					.readExcel(System.getProperty("user.dir") + "/data/dataThongtinHDThayThe_" + casetest + ".xlsx", 0);
-			listhanghoathaythe = ReadThongtinhanghoaHD
-					.readExcel(System.getProperty("user.dir") + "/data/dataThongtinhanghoaThayThe_" + casetest + ".xlsx", 0);
+			listhanghoathaythe = ReadThongtinhanghoaHD.readExcel(
+					System.getProperty("user.dir") + "/data/dataThongtinhanghoaThayThe_" + casetest + ".xlsx", 0);
 
 			for (ThongTinHD thongtinhd : listthongtinhdthaythe) {
 				List<HangHoa> listhh = new ArrayList<HangHoa>();
@@ -279,10 +335,10 @@ public class InvM_InvoiceIssuePage extends BaseTest {
 		List<ThongTinHD> listthongtinhddctt = new ArrayList<ThongTinHD>();
 		List<HangHoa> listhanghoadctt = new ArrayList<HangHoa>();
 		try {
-			listthongtinhddctt = ReadThongtinchungHD
-					.readExcel(System.getProperty("user.dir") + "/data/dataThongtinHDDCThongTin_" + casetest + ".xlsx", 0);
-			listhanghoadctt = ReadThongtinhanghoaHD
-					.readExcel(System.getProperty("user.dir") + "/data/dataThongtinhanghoaDcThongTin_" + casetest + ".xlsx", 0);
+			listthongtinhddctt = ReadThongtinchungHD.readExcel(
+					System.getProperty("user.dir") + "/data/dataThongtinHDDCThongTin_" + casetest + ".xlsx", 0);
+			listhanghoadctt = ReadThongtinhanghoaHD.readExcel(
+					System.getProperty("user.dir") + "/data/dataThongtinhanghoaDcThongTin_" + casetest + ".xlsx", 0);
 
 			for (ThongTinHD thongtinhd : listthongtinhddctt) {
 				List<HangHoa> listhh = new ArrayList<HangHoa>();
@@ -305,8 +361,8 @@ public class InvM_InvoiceIssuePage extends BaseTest {
 		try {
 			listthongtinhddct = ReadThongtinchungHD
 					.readExcel(System.getProperty("user.dir") + "/data/dataThongtinHDDCTien_" + casetest + ".xlsx", 0);
-			listhanghoadct = ReadThongtinhanghoaHD
-					.readExcel(System.getProperty("user.dir") + "/data/dataThongtinhanghoaDCTien_" + casetest + ".xlsx", 0);
+			listhanghoadct = ReadThongtinhanghoaHD.readExcel(
+					System.getProperty("user.dir") + "/data/dataThongtinhanghoaDCTien_" + casetest + ".xlsx", 0);
 
 			for (ThongTinHD thongtinhd : listthongtinhddct) {
 				List<HangHoa> listhh = new ArrayList<HangHoa>();
@@ -837,18 +893,19 @@ public class InvM_InvoiceIssuePage extends BaseTest {
 			}
 		}
 	}
-	
+
 	public void xoabohoadon() {
 		checkchon.click();
 		xoabohoadon.click();
 	}
-	
+
 	public void checkTrangThaiHoaDon() {
-		// Nếu trạng thái hóa đơn là Bị thay thế hoặc xóa bỏ: thì Không hiển thị nút Thao tác
+		// Nếu trạng thái hóa đơn là Bị thay thế hoặc xóa bỏ: thì Không hiển thị nút
+		// Thao tác
 		if (dstrangthai.getText().contains("Bị thay thế")) {
 			thaotac.isDisplayed();
 			thaotac.isEnabled();
-			
+
 		}
 	}
 

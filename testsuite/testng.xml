@@ -109,35 +109,39 @@
 
 			<class name="tests.InvM_InvoiceListTest">
 			<methods>
-			<!-- <include name="clickInvoiceManagement" /> -->
-			<!-- <include name="laphoadonFail1" /> -->
-			<!-- <include name="laphoadonFail2" /> -->
-			<!-- <include name="laphoadonFail3" /> -->
-			<!-- <include name="laphoadonFail4" /> -->
-			<!-- <include name="laphoadonFail5" /> -->
-			<!-- <include name="laphoadon1dongSuccess" /> -->
-			<!-- <include name="laphoadonnhieudongSuccess" /> -->
-			<!-- <include name="laphoadonkhongchiuthue" /> -->
-			<!-- <include name="laphoadonkhongkekhaithue" /> -->
-			<!-- <include name="laphoadonthue0" /> -->
-			<!-- <include name="laphoadonthue3" /> -->
-			<!-- <include name="laphoadonthue5" /> -->
-			<!-- <include name="laphoadonthue7" /> -->
-			<!-- <include name="laphoadonthue8" /> -->
-			<!-- <include name="laphoadonthue10" /> -->
-			<!-- <include name="laphoadoncokhuyenmai" /> -->
-			<!-- <include name="laphoadoncochietkhau" /> -->
-			<!-- <include name="laphoadoncoghichu" /> -->
-			<!-- <include name="laphdcotatcahinhthuc" /> -->
-			<!-- <include name="suahoadon" /> -->
-			<!-- <include name="xoahoadon" /> -->
-			<!-- <include name="phathanhthanhcongtatcahd" /> -->
-			<include name="phathanhthanhconghdtruocthaotac" />
+			<include name="clickInvoiceManagement" />
+<!-- 			<include name="laphoadonFail1" /> -->
+<!-- 			<include name="laphoadonFail2" /> -->
+<!-- 			<include name="laphoadonFail3" /> -->
+<!-- 			<include name="laphoadonFail4" /> -->
+<!-- 			<include name="laphoadonFail5" /> -->
+<!-- 			<include name="laphoadon1dongSuccess" /> -->
+<!-- 			<include name="laphoadonnhieudongSuccess" /> -->
+<!-- 			<include name="laphoadonkhongchiuthue" /> -->
+<!-- 			<include name="laphoadonkhongkekhaithue" /> -->
+<!-- 			<include name="laphoadonthue0" /> -->
+<!-- 			<include name="laphoadonthue3" /> -->
+<!-- 			<include name="laphoadonthue5" /> -->
+<!-- 			<include name="laphoadonthue7" /> -->
+<!-- 			<include name="laphoadonthue8" /> -->
+<!-- 			<include name="laphoadonthue10" /> -->
+<!-- 			<include name="laphoadoncokhuyenmai" /> -->
+<!-- 			<include name="laphoadoncochietkhau" /> -->
+<!-- 			<include name="laphoadoncoghichu" /> -->
+<!-- 			<include name="laphdcotatcahinhthuc" /> -->
+<!-- 			<include name="suahoadon" /> -->
+<!-- 			<include name="xoahoadon" /> -->
+<!-- 			<include name="phathanhthanhcongtatcahd" /> -->
 			</methods>
 			</class>
 			
 			<class name="tests.InvM_InvoiceIssueTest">
 			<methods>
+<!-- 			<include name="thaythehdchualaymacqt" /> -->
+<!-- 			<include name="dieuchinhtthdchualaymacqt" /> -->
+<!-- 			<include name="dieuchinhtienhdchualaymacqt" /> -->
+			<include name="chuyendoihdchualaymacqt" />
+			<include name="chuyendoihdlaymacqt" />
 			<include name="thaythehdthanhcong1" />
 			<include name="thaythehdthanhcong2" />
 			<include name="thaythehdthanhcong3" />

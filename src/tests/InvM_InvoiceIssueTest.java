@@ -9,22 +9,22 @@ import pages.InvM_InvoiceListPage;
 
 
 public class InvM_InvoiceIssueTest extends BaseTest {
-
-	@Test
-	public void chuyendoihoadonchualaymacqt() {
-		// Th chuyen doi hoa don chua lay ma cua cqt
-		InvM_InvoiceIssuePage invissuelistPg;
-		invissuelistPg = new InvM_InvoiceIssuePage(getDriver());
-		invissuelistPg.clickInvoiceIssueList();
-		invissuelistPg.clickchuyendoihd();
-		Assert.assertEquals(invissuelistPg.messageError.getText(), "Hóa đơn chưa được cấp mã của CQT.");
-	}
 	
 	@Test
-	public void thaythehdchualaymacqt() {
+	public void thaythehdchualaymacqt() throws Exception {
 		// TH thay the hoa don chua lay ma cua co quan thue
 		InvM_InvoiceIssuePage invissuelistPg;
 		invissuelistPg = new InvM_InvoiceIssuePage(getDriver());
+		
+		InvM_InvoiceListPage invlistPg;
+		invlistPg = new InvM_InvoiceListPage(getDriver());
+		
+		invlistPg.clickInvoiceList();
+		invlistPg.clickCreateInvoice();
+		invlistPg.lapHoaDonTruocDCThayThe("case1");
+		invlistPg.selectInvoice();
+		invlistPg.phathanh1hd();
+		
 		invissuelistPg.clickthaythehd();
 		Assert.assertEquals(invissuelistPg.messageError.getText(), "Hóa đơn chưa được cấp mã của CQT.");
 	}
@@ -48,12 +48,23 @@ public class InvM_InvoiceIssueTest extends BaseTest {
 	}
 	
 	@Test
-	public void chuyendoihdthanhcong() {
+	public void chuyendoihdchualaymacqt() {
+		// Th chuyen doi hoa don chua lay ma cua cqt
+		InvM_InvoiceIssuePage invissuelistPg;
+		invissuelistPg = new InvM_InvoiceIssuePage(getDriver());
+		invissuelistPg.clickInvoiceIssueList();
+		invissuelistPg.clickchuyendoihd();
+		Assert.assertEquals(invissuelistPg.titlechuyendoi.getText(), "Người chuyển đổi");
+		invissuelistPg.clickCloseView();
+	}
+	
+	@Test
+	public void chuyendoihdlaymacqt() {
 		// TH chuyen doi hoa don: chuyen doi hoa don thanh cong
 		InvM_InvoiceIssuePage invissuelistPg;
 		invissuelistPg = new InvM_InvoiceIssuePage(getDriver());
 		invissuelistPg.clickchuyendoihd();
-		Assert.assertEquals(invissuelistPg.messageError.getText(), "");
+		Assert.assertEquals(invissuelistPg.titlechuyendoi.getText(), "Người chuyển đổi");
 	}
 	
 	@Test

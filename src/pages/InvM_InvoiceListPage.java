@@ -108,6 +108,11 @@ public class InvM_InvoiceListPage extends BaseTest {
 
 	public void clickInvManagement() {
 		invoicemanagement.click();
+		try {
+			Thread.sleep(2000);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 
 	public void clickInvoiceList() {
@@ -149,7 +154,7 @@ public class InvM_InvoiceListPage extends BaseTest {
 			if (listthongtinhd.get(i) != null) {
 				Select seri = new Select(serial);
 				seri.selectByVisibleText(listthongtinhd.get(i).getSerial());
-
+				
 				cuscode.clear();
 				cuscode.sendKeys(listthongtinhd.get(i).getMakhachhang());
 				byername.clear();
@@ -358,7 +363,7 @@ public class InvM_InvoiceListPage extends BaseTest {
 
 	public void selectInvoice() {
 		Select seri = new Select(serial);
-		seri.selectByVisibleText("1C22TGT");
+		seri.selectByVisibleText("1C22TBB");
 		timkiem.click();
 	}
 
