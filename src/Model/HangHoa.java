@@ -69,6 +69,7 @@ public class HangHoa {
 		setStt("");
 		setHinhthuc("");
 		setTenhanghoa("");
+		setDonvitinh("");
 		setDongia("");
 		setSoluong("");
 		setXoa(true);

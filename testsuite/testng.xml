@@ -137,9 +137,9 @@
 			
 			<class name="tests.InvM_InvoiceIssueTest">
 			<methods>
-<!-- 			<include name="thaythehdchualaymacqt" /> -->
-<!-- 			<include name="dieuchinhtthdchualaymacqt" /> -->
-<!-- 			<include name="dieuchinhtienhdchualaymacqt" /> -->
+			<include name="thaythehdchualaymacqt" />
+			<include name="dieuchinhtthdchualaymacqt" />
+			<include name="dieuchinhtienhdchualaymacqt" />
 			<include name="chuyendoihdchualaymacqt" />
 			<include name="chuyendoihdlaymacqt" />
 			<include name="thaythehdthanhcong1" />

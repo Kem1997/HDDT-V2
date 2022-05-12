@@ -2,11 +2,17 @@ package pages;
 
 import static org.testng.Assert.fail;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -74,6 +80,9 @@ public class InvM_InvoiceIssuePage extends BaseTest {
 	@FindBy(xpath = "//div[@class='errorbox']")
 	public static WebElement messageError;
 
+	@FindBy(xpath = "//div[@class='messagebox']")
+	public static WebElement messageSuccess;
+
 	@FindBy(xpath = "//button[text()='Chuyển đổi']")
 	static WebElement chuyendoi;
 
@@ -137,8 +146,8 @@ public class InvM_InvoiceIssuePage extends BaseTest {
 	@FindBy(xpath = "//select[@id='VATRate']")
 	static WebElement vatrate;
 
-	@FindBy(xpath = "//button[@id='submitInv']")
-	static WebElement save;
+	@FindBy(xpath = "//button[@onclick='submitForm()']")
+	static WebElement luuhd;
 
 	@FindBy(xpath = "//input[@id='mTotal']")
 	static WebElement tongtiendichvu;
@@ -184,6 +193,11 @@ public class InvM_InvoiceIssuePage extends BaseTest {
 
 	public void selectInvoice(String ChonKyHieu, String TrangThai, String SoHoaDon, String MaTraCuu, String TuNgay,
 			String DenNgay, String TenKhachHang, String MasoThue, String MaKhachHang, String KieuHoaDon) {
+		try {
+			Thread.sleep(2000);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 		Select seri = new Select(selectSerrial);
 		seri.selectByVisibleText(ChonKyHieu);
 
@@ -209,6 +223,11 @@ public class InvM_InvoiceIssuePage extends BaseTest {
 		khd.selectByVisibleText(KieuHoaDon);
 
 		timkiem.click();
+		try {
+			Thread.sleep(2000);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 
 	public void clickThaoTac() {
@@ -233,11 +252,8 @@ public class InvM_InvoiceIssuePage extends BaseTest {
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
-
-//		driver.navigate().refresh();
+		driver.navigate().refresh();
 		
-		Actions actions = new Actions(driver);
-		actions.keyDown(Keys.CONTROL).sendKeys(Keys.F5).perform();
 
 		clickThaoTac();
 		selectchuyendoi.click();
@@ -295,16 +311,31 @@ public class InvM_InvoiceIssuePage extends BaseTest {
 
 		if (trangthaihd1.getText().equals("Chưa lấy mã của CQT")) {
 			chondonghd1.click();
+			try {
+				Thread.sleep(2000);
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
 			laymahoadon.click();
+			try {
+				Thread.sleep(2000);
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
 			gui.click();
 
 			try {
-				Thread.sleep(5000);
+				Thread.sleep(7000);
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+			timkiem.click();
+			try {
+				Thread.sleep(2000);
 			} catch (Exception e) {
 				// TODO: handle exception
 			}
 		}
-		
 	}
 
 	public List<ThongTinHD> getThongTinHDThayThe(String casetest) {
@@ -494,6 +525,7 @@ public class InvM_InvoiceIssuePage extends BaseTest {
 					// Xoa dong hang hoa va tinh lai tong tien
 					WebElement xoadonghanghoa = driver
 							.findElement(By.xpath("//td[text()='" + k + "']//parent::tr//td[1]"));
+
 					if (listhh.get(j).getXoa().equals(false)) {
 						xoadonghanghoa.click();
 						try {
@@ -580,7 +612,7 @@ public class InvM_InvoiceIssuePage extends BaseTest {
 				throw new Exception("SAI TONG CONG TIEN THANH TOAN O HOA DON " + i);
 			}
 
-			save.click();
+			luuhd.click();
 			try {
 				Thread.sleep(2000);
 			} catch (Exception e) {
@@ -668,12 +700,12 @@ public class InvM_InvoiceIssuePage extends BaseTest {
 					if (Integer.parseInt(tongcongtientt.getAttribute("value")) != 0) {
 						throw new Exception("HIEN THI SAI TONG CONG TIEN THANH TOAN CUA HOA DON DIEU CHINH THONG TIN");
 					}
-
-					if (doctien.getAttribute("value") != "Không đồng") {
+					
+					if (!(doctien.getAttribute("value")).equals("Không đồng")) {
 						throw new Exception("HIEN THI SAI SO TIEN BANG CHU CUA HOA DON DIEU CHINH THONG TIN");
 					}
 
-					save.click();
+					luuhd.click();
 					try {
 						Thread.sleep(2000);
 					} catch (Exception e) {
@@ -834,7 +866,7 @@ public class InvM_InvoiceIssuePage extends BaseTest {
 			if (Float.parseFloat(tongtiendichvu.getAttribute("value").replace(",", "")) != total) {
 				throw new Exception("SAI TONG TIEN DICH VU O HOA DON" + i);
 			}
-
+			
 			// Tinh Tien thue GTGT va Tong cong tien thanh toan theo tung loai thue suat
 			if (listthongtinhddctien.get(i).getThueGTGT().equals("0%")) {
 				vatamount = 0;
@@ -885,7 +917,7 @@ public class InvM_InvoiceIssuePage extends BaseTest {
 				throw new Exception("SAI TONG CONG TIEN THANH TOAN O HOA DON " + i);
 			}
 
-			save.click();
+			luuhd.click();
 			try {
 				Thread.sleep(2000);
 			} catch (Exception e) {
