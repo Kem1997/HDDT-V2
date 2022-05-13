@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+encoding//src/Model/SQLConnect.java=UTF-8
 encoding//src/pages/Cat_CustomerPage.java=UTF-8
 encoding//src/pages/DK_DangKySuDungPage.java=UTF-8
 encoding//src/pages/DK_ThongBaoPHPage.java=UTF-8
@@ -14,6 +15,8 @@ encoding//src/pages/Rep_TinhHinhSuDungHDPage.java=UTF-8
 encoding//src/pages/Sys_UnitInforPage.java=UTF-8
 encoding//src/pages/Sys_UserAdminPage.java=UTF-8
 encoding//src/pages/Sys_UserAuthorPage.java=UTF-8
+encoding//src/pages/TD_ThongDiepGuiHDPage.java=UTF-8
+encoding//src/pages/TD_ThongDiepNhanHDPage.java=UTF-8
 encoding//src/pages/XuLyHD_HDThayThePage.java=UTF-8
 encoding//src/pages/XuLyHD_LapBCHuyPage.java=UTF-8
 encoding//src/pages/XuLyHD_ThongBaoHDSaiSotPage.java=UTF-8

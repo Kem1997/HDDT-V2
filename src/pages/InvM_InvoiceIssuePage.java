@@ -21,6 +21,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import Model.DelayedPressEnterThread;
 import Model.HangHoa;
 import Model.ThongTinHD;
 import tests.BaseTest;
@@ -246,14 +247,10 @@ public class InvM_InvoiceIssuePage extends BaseTest {
 			// TODO: handle exception
 		}
 		chuyendoi.click();
+
+		DelayedPressEnterThread thr = new DelayedPressEnterThread("DelayedPressEnterThread", 5000);
+
 		printChuyendoi.click();
-		try {
-			Thread.sleep(2000);
-		} catch (Exception e) {
-			// TODO: handle exception
-		}
-		driver.navigate().refresh();
-		
 
 		clickThaoTac();
 		selectchuyendoi.click();
@@ -700,7 +697,7 @@ public class InvM_InvoiceIssuePage extends BaseTest {
 					if (Integer.parseInt(tongcongtientt.getAttribute("value")) != 0) {
 						throw new Exception("HIEN THI SAI TONG CONG TIEN THANH TOAN CUA HOA DON DIEU CHINH THONG TIN");
 					}
-					
+
 					if (!(doctien.getAttribute("value")).equals("Không đồng")) {
 						throw new Exception("HIEN THI SAI SO TIEN BANG CHU CUA HOA DON DIEU CHINH THONG TIN");
 					}
@@ -866,7 +863,7 @@ public class InvM_InvoiceIssuePage extends BaseTest {
 			if (Float.parseFloat(tongtiendichvu.getAttribute("value").replace(",", "")) != total) {
 				throw new Exception("SAI TONG TIEN DICH VU O HOA DON" + i);
 			}
-			
+
 			// Tinh Tien thue GTGT va Tong cong tien thanh toan theo tung loai thue suat
 			if (listthongtinhddctien.get(i).getThueGTGT().equals("0%")) {
 				vatamount = 0;

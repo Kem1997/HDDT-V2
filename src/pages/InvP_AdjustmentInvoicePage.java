@@ -19,7 +19,7 @@ public class InvP_AdjustmentInvoicePage extends BaseTest {
 
 	@FindBy(xpath = "//input[@id='InvNo']")
 	static WebElement selectInvoiceno;
-//	
+	
 	@FindBy(xpath = "//input[@id='FromDate']")
 	static WebElement selectFromdate;
 
