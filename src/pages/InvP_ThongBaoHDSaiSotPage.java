@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import tests.BaseTest;
 
-public class XuLyHD_ThongBaoHDSaiSotPage extends BaseTest {
+public class InvP_ThongBaoHDSaiSotPage extends BaseTest {
 
 	@FindBy(xpath = "//a[@href='/ThongBaoHDSS/Index']")
 	static WebElement thongbaohdsaisot;
@@ -107,7 +107,7 @@ public class XuLyHD_ThongBaoHDSaiSotPage extends BaseTest {
 	@FindBy(xpath = "//div[@class='messagebox']")
 	public static WebElement message;
 
-	public XuLyHD_ThongBaoHDSaiSotPage(WebDriver driver) {
+	public InvP_ThongBaoHDSaiSotPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}

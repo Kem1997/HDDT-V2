@@ -5,10 +5,10 @@ import org.testng.annotations.Test;
 
 import pages.DK_DangKySuDungPage;
 import pages.DK_ThongBaoPHPage;
-import pages.XuLyHD_HDThayThePage;
-import pages.XuLyHD_LapBCHuyPage;
+import pages.InvP_LapBCHuyPage;
+import pages.InvP_ReplacementInvoicePage;
 
-public class XuLyHD_LapBCHuyTest extends BaseTest {
+public class InvP_LapBCHuyTest extends BaseTest {
 
 	@Test
 	public void lapThongBaoPhatHanh() {
@@ -30,21 +30,20 @@ public class XuLyHD_LapBCHuyTest extends BaseTest {
 	
 	@Test
 	public void clickLapBaoCaoHuy() {
-		XuLyHD_LapBCHuyPage lapbaocaohuyPg;
-		lapbaocaohuyPg = new XuLyHD_LapBCHuyPage(getDriver());
+		InvP_LapBCHuyPage lapbaocaohuyPg;
+		lapbaocaohuyPg = new InvP_LapBCHuyPage(getDriver());
 		
-		XuLyHD_HDThayThePage hdthaythePg;
-		hdthaythePg = new XuLyHD_HDThayThePage(getDriver());
-		hdthaythePg.clickXuLyHoaDon();
-		
+		InvP_ReplacementInvoicePage hdthaythePg;
+		hdthaythePg = new InvP_ReplacementInvoicePage(getDriver());
+		hdthaythePg.clickInvoiceProcessing();;
 		lapbaocaohuyPg.clickLapBCHuy();
 	}
 
 	@Test
 	public void addThongBaoHuyHoaDonFail1() {
 		// TH bo trong cac truong bat buoc: Bo truong tat ca cac truong du lieu
-		XuLyHD_LapBCHuyPage lapbaocaohuyPg;
-		lapbaocaohuyPg = new XuLyHD_LapBCHuyPage(getDriver());
+		InvP_LapBCHuyPage lapbaocaohuyPg;
+		lapbaocaohuyPg = new InvP_LapBCHuyPage(getDriver());
 		lapbaocaohuyPg.clickTaoMoi();
 		lapbaocaohuyPg.addThongBaoHuyHoaDon("", "", "", "", "");
 		Assert.assertEquals(lapbaocaohuyPg.title.getText(), "Thông báo hủy hóa đơn");
@@ -53,8 +52,8 @@ public class XuLyHD_LapBCHuyTest extends BaseTest {
 	@Test
 	public void addThongBaoHuyHoaDonFail2() {
 		// TH bo trong cac truong bat buoc: Bo truong Phuong phap huy
-		XuLyHD_LapBCHuyPage lapbaocaohuyPg;
-		lapbaocaohuyPg = new XuLyHD_LapBCHuyPage(getDriver());
+		InvP_LapBCHuyPage lapbaocaohuyPg;
+		lapbaocaohuyPg = new InvP_LapBCHuyPage(getDriver());
 		lapbaocaohuyPg.addThongBaoHuyHoaDon("", "Phạm Thị Ly", "Phạm Thị Ly", "Hóa đơn giá trị gia tăng",
 				"1C01T, 1C22TBB (1-1000)");
 		Assert.assertEquals(lapbaocaohuyPg.title.getText(), "Thông báo hủy hóa đơn");
@@ -63,8 +62,8 @@ public class XuLyHD_LapBCHuyTest extends BaseTest {
 	@Test
 	public void addThongBaoHuyHoaDonFail3() {
 		// TH bo trong cac truong bat buoc: Bo truong Nguoi tao
-		XuLyHD_LapBCHuyPage lapbaocaohuyPg;
-		lapbaocaohuyPg = new XuLyHD_LapBCHuyPage(getDriver());
+		InvP_LapBCHuyPage lapbaocaohuyPg;
+		lapbaocaohuyPg = new InvP_LapBCHuyPage(getDriver());
 		lapbaocaohuyPg.addThongBaoHuyHoaDon("Hủy thông báo", "", "Phạm Thị Ly", "Hóa đơn giá trị gia tăng",
 				"1C01T, 1C22TBB (1-1000)");
 		Assert.assertEquals(lapbaocaohuyPg.title.getText(), "Thông báo hủy hóa đơn");
@@ -73,8 +72,8 @@ public class XuLyHD_LapBCHuyTest extends BaseTest {
 	@Test
 	public void addThongBaoHuyHoaDonFail4() {
 		// TH bo trong cac truong bat buoc: Bo truong Nguoi dai dien phap luat
-		XuLyHD_LapBCHuyPage lapbaocaohuyPg;
-		lapbaocaohuyPg = new XuLyHD_LapBCHuyPage(getDriver());
+		InvP_LapBCHuyPage lapbaocaohuyPg;
+		lapbaocaohuyPg = new InvP_LapBCHuyPage(getDriver());
 		lapbaocaohuyPg.addThongBaoHuyHoaDon("Hủy thông báo", "Phạm Thị Ly", "", "Hóa đơn giá trị gia tăng",
 				"1C01T, 1C22TBB (1-1000)");
 		Assert.assertEquals(lapbaocaohuyPg.title.getText(), "Thông báo hủy hóa đơn");
@@ -83,8 +82,8 @@ public class XuLyHD_LapBCHuyTest extends BaseTest {
 	@Test
 	public void addThongBaoHuyHoaDonFail5() {
 		// TH bo trong cac truong bat buoc: Bo truong Danh sach hoa don huy
-		XuLyHD_LapBCHuyPage lapbaocaohuyPg;
-		lapbaocaohuyPg = new XuLyHD_LapBCHuyPage(getDriver());
+		InvP_LapBCHuyPage lapbaocaohuyPg;
+		lapbaocaohuyPg = new InvP_LapBCHuyPage(getDriver());
 		lapbaocaohuyPg.addThongBaoHuyHoaDon("Hủy thông báo", "Phạm Thị Ly", "Phạm Thị Ly", "Hóa đơn giá trị gia tăng",
 				"");
 		Assert.assertEquals(lapbaocaohuyPg.title.getText(), "Thông báo hủy hóa đơn");
@@ -92,8 +91,8 @@ public class XuLyHD_LapBCHuyTest extends BaseTest {
 	
 	@Test
 	public void deleteDanhSachHDHuy() {
-		XuLyHD_LapBCHuyPage lapbaocaohuyPg;
-		lapbaocaohuyPg = new XuLyHD_LapBCHuyPage(getDriver());
+		InvP_LapBCHuyPage lapbaocaohuyPg;
+		lapbaocaohuyPg = new InvP_LapBCHuyPage(getDriver());
 		lapbaocaohuyPg.addThongBaoHuyHoaDon("Hủy thông báo", "Phạm Thị Ly", "Phạm Thị Ly", "Hóa đơn giá trị gia tăng",
 				"1C01T, 1C22TBB (1-1000)");
 		lapbaocaohuyPg.deleteDanhSachHDHuy();
@@ -103,8 +102,8 @@ public class XuLyHD_LapBCHuyTest extends BaseTest {
 	@Test
 	public void addThongBaoHoaDonSuccess() {
 		// TH dien tat ca cac truong du lieu
-		XuLyHD_LapBCHuyPage lapbaocaohuyPg;
-		lapbaocaohuyPg = new XuLyHD_LapBCHuyPage(getDriver());
+		InvP_LapBCHuyPage lapbaocaohuyPg;
+		lapbaocaohuyPg = new InvP_LapBCHuyPage(getDriver());
 		lapbaocaohuyPg.addThongBaoHuyHoaDon("Hủy thông báo", "Phạm Thị Ly", "Phạm Thị Ly", "Hóa đơn giá trị gia tăng",
 				"1C01T, 1C22TBB (1-1000)");
 		Assert.assertEquals(lapbaocaohuyPg.title.getText(), "Thông báo hủy hóa đơn");

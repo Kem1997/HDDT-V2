@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import tests.BaseTest;
 
-public class XuLyHD_LapBCHuyPage extends BaseTest {
+public class InvP_LapBCHuyPage extends BaseTest {
 
 	@FindBy(xpath = "//a[@href='/InvoiceCancel/index']")
 	static WebElement lapbaocaohuy;
@@ -62,7 +62,7 @@ public class XuLyHD_LapBCHuyPage extends BaseTest {
 	@FindBy(xpath = "//td[10]/i")
 	public static WebElement delete;
 
-	public XuLyHD_LapBCHuyPage(WebDriver driver) {
+	public InvP_LapBCHuyPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
